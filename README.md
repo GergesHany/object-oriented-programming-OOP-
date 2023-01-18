@@ -1,15 +1,15 @@
 # Content
 
-1. **Introduction**  
-2. **Objects**  
-3. **Class**  
+1. [Introduction](#OOP)
+2. **Class**    
+3. **Objects**
 4. **Encapsulation**  
 5. **Abstraction**  
 6. **Inheritance**  
 7. **Polymorphism**
 <br> 
 
-## Object-oriented programming:  
+## Object-oriented programming: <a name="OOP"></a>
 
 Is a programming paradigm in which programs are organized around data, or based on the concept "objects", rather than functions and logic.
 
@@ -27,14 +27,4 @@ OOP was developed to increase the reusability and maintainability of source code
 - Classes and Objects
 
 ![blog-img-21-5d7f491af2f797edc35c669d38cdacaa](https://user-images.githubusercontent.com/105644935/213039464-b24b0005-c74c-4985-9920-1422b78891a2.svg)
-
-
-
-1 - Class: The building block of C++ that leads to Object-Oriented programming is a Class. It is a user-defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A class is like a blueprint for an object.
-
-
-
-
-
-
 
