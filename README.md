@@ -1,7 +1,7 @@
 # Content
 
 1. [Introduction](#OOP)
-2. **Class**    
+2. [Class](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
 3. **Objects**
 4. **Encapsulation**  
 5. **Abstraction**  
