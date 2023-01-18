@@ -10,7 +10,7 @@ class car{
 
   // public members are accessible from outside the class
   public:
-   // default constructor
+   // default constructor (empty constructor) 
     car(){
       max_speed = price = 0;
       name = color = model = "";
