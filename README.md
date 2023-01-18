@@ -1,12 +1,11 @@
 # Content
 
 1. [Introduction](#OOP)
-2. [Class](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
-3. **Objects**
-4. **Encapsulation**  
-5. **Abstraction**  
-6. **Inheritance**  
-7. **Polymorphism**
+2. [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
+3. **Encapsulation**  
+4. **Abstraction**  
+5. **Inheritance**  
+6. **Polymorphism**
 <br> 
 
 ## Object-oriented programming: <a name="OOP"></a>
