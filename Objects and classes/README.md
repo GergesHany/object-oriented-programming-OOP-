@@ -10,6 +10,63 @@ In the above example of class Car, the data member will be speed limit, mileage 
 
 **An Object** : is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
 
+
+## Constructors:
+Constructor in C++ is a special method that is invoked automatically at the time of object creation. It is used to initialize the data members of new objects generally. The constructor in C++ has the same name as the class or structure. Constructor is invoked at the time of object creation. It constructs the values i.e. provides data for the object which is why it is known as constructors.
+
+Constructor does not have a return value, hence they do not have a return type.  
+
+
+### Constructors can be defined inside or outside the class declaration:-
+
+**The syntax for defining the constructor within the class: ` < class-name > (list-of-parameters) { // constructor definition }`**
+
+**The syntax for defining the constructor outside the class: ` <class-name>: :<class-name> (list-of-parameters){ // constructor definition}`**
+
+## Example for defining the constructor within the class
+
+```cpp
+class student {
+  string name;
+ 
+public:
+    // Default constructor (no parameters)
+    student(){
+      cout << "Default constructor called" << "\n";
+    }
+};
+```
+
+## Example for defining the constructor outside  the class
+
+```cpp
+class student {
+  string name;
+ 
+public:
+    student(); // constructor declaration
+};
+
+// constructor definition 
+student::student(){
+  cout << "Default constructor called" << "\n";
+}
+```
+
+
+
+### A constructor is different from normal functions in following ways: 
+- Constructor has same name as the class itself
+- Default Constructors don’t have input argument however, Copy and Parameterized Constructors have input arguments
+- Constructors don’t have return type
+- A constructor is automatically called when an object is created
+- It must be placed in public section of class.
+- If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
+
+
+
+
+
 ## Defining Class 
 
 ![Classes-and-Objects-in-C](https://user-images.githubusercontent.com/105644935/213048516-b58f0441-dc75-4e9c-a99c-ae2ce24e3023.png)
