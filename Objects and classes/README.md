@@ -323,3 +323,11 @@ int main()
   return 0;
 }
 ```
+
+- Overloaded constructors essentially have the same name (exact name of the class) and different by number and type of arguments.
+- A constructor is called depending upon the number and type of arguments passed.
+- While creating the object, arguments must be passed to let compiler know, which constructor needs to be called. 
+
+
+
+
