@@ -186,5 +186,10 @@ student::student(){
 <br>
 
 ## Types of Constructors
+- Default Constructors:
+- Parameterized Constructors: 
+- Copy Constructor: 
+
+
 
 
