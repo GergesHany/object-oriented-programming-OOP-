@@ -190,6 +190,136 @@ student::student(){
 - Parameterized Constructors: 
 - Copy Constructor: 
 
+<br>
 
 
+1. **Default Constructors:** **Default constructor is the constructor which doesn’t take any argument. It has no parameters. It is also called a zero-argument constructor.**
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+class temp {
+public:
+    int a, b;
+ 
+    // Default Constructor (Called when no arguments are passed)
+    temp(){
+        a = 10; // Default value of a
+        b = 20; // Default value of b
+    }
+};
+
+
+int main()
+{
+
+  temp t1; // Default Constructor called
+  cout << t1.a << " " << t1.b << "\n";
+  
+  return 0;
+}
+```
+> **Note**: **Even if we do not define any constructor explicitly, the compiler will automatically provide a default constructor implicitly**.
+
+<br>
+<br>
+
+2. **Parameterized Constructors:** **It is possible to pass arguments to constructors. Typically, these arguments help initialize an object when it is created. To create a parameterized constructor, simply add parameters to it the way you would to any other function. When you define the constructor’s body, use the parameters to initialize the object.** 
+
+> **Note**: **when the parameterized constructor is defined and no default constructor is defined explicitly, the compiler will not implicitly call the default constructor and hence creating a simple object as**
+
+#### Student s;
+**Will flash an error**
+
+<br>
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+class Point {
+private:
+    int x, y;
+ 
+public:
+
+    // Parameterized Constructor 
+    Point(int x1, int y1){
+        x = x1;
+        y = y1;
+    }
+
+    int getX() { return x; } // Getter function for x 
+    int getY() { return y; } // Getter function for y
+ 
+};
+
+int main()
+{
+
+  // Point p; ->> error because no default constructor
+  Point p(10, 20); // Parameterized constructor called
+  cout << p.getX() << " " << p.getY();
+  
+  return 0;
+}
+```
+<br>
+
+**When an object is declared in a parameterized constructor, the initial values have to be passed as arguments to the constructor function. The normal way of object declaration may not work. The constructors can be called explicitly or implicitly.**
+
+`Example p = Example(0, 50); // Explicit call`
+
+`Example p(0, 50);           // Implicit call`
+
+- ## Uses of Parameterized constructor: 
+1. **It is used to initialize the various data elements of different objects with different values when they are created.**
+2. **It is used to overload constructors.**
+
+Can we have more than one constructor in a class? Yes, It is called Constructor Overloading.
+
+### Constructor Overloading
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+ 
+class construct{
+ 
+public:
+    float area;
+     
+    // Constructor with no parameters (Default constructor)
+    construct(){
+        area = 0;
+    }
+     
+    // Constructor with two parameters (Parameterized constructor)
+    construct(int a, int b){
+        area = a * b;
+    }
+     
+     // function to display the area
+    void disp(){
+        cout << "Area: " << area << "\n";
+    }
+};
+ 
+
+int main()
+{
+ 
+  construct obj1; // Implicit call to constructor
+  construct obj2(10, 20); // Implicit call to constructor
+  construct obj3 = construct(20, 30); // Explicit call to constructor
+
+  obj1.disp(); // calling member function
+  obj2.disp(); // calling member function
+  obj3.disp(); // calling member function
+  
+  
+  return 0;
+}
+```
