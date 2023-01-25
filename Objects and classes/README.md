@@ -193,7 +193,8 @@ student::student(){
 <br>
 
 
-1. **Default Constructors:** **Default constructor is the constructor which doesn’t take any argument. It has no parameters. It is also called a zero-argument constructor.**
+### 1. **Default Constructors:** 
+**Default constructor is the constructor which doesn’t take any argument. It has no parameters. It is also called a zero-argument constructor.**
 
 ```cpp
 #include <bits/stdc++.h>
@@ -225,7 +226,8 @@ int main()
 <br>
 <br>
 
-2. **Parameterized Constructors:** **It is possible to pass arguments to constructors. Typically, these arguments help initialize an object when it is created. To create a parameterized constructor, simply add parameters to it the way you would to any other function. When you define the constructor’s body, use the parameters to initialize the object.** 
+### 2. **Parameterized Constructors:** 
+**Parameterized Constructors: It is possible to pass arguments to constructors. Typically, these arguments help initialize an object when it is created. To create a parameterized constructor, simply add parameters to it the way you would to any other function. When you define the constructor’s body, use the parameters to initialize the object.** 
 
 > **Note**: **when the parameterized constructor is defined and no default constructor is defined explicitly, the compiler will not implicitly call the default constructor and hence creating a simple object as**
 
@@ -329,5 +331,58 @@ int main()
 - While creating the object, arguments must be passed to let compiler know, which constructor needs to be called. 
 
 
+## 3. **Copy Constructor:** 
+**A copy constructor is a member function that initializes an object using another object of the same class**
+
+Whenever we define one or more non-default constructors( with parameters ) for a class, a default constructor( without parameters ) should also be explicitly defined as the compiler will not provide a default constructor in this case. However, it is not necessary but it’s considered to be the best practice to always define a default constructor. 
+
+Copy constructor takes a reference to an object of the same class as an argument.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+ 
+class construct{
+ 
+public:
+    float area;
+     
+    // Constructor with no parameters (Default constructor)
+    construct(){
+        area = 0;
+    }
+     
+    // Constructor with two parameters (Parameterized constructor)
+    construct(int a, int b){
+        area = a * b;
+    }
+     
+    // copy Constructor
+    construct(const construct &temp){
+        area = temp.area;    
+    }
+    
+    // function to display the area
+    void disp(){
+        cout << "Area: " << area << "\n";
+    }
+
+};
+ 
+
+int main()
+{
+ 
+  construct obj1; // Implicit call to constructor
+  construct obj2(10, 20); // Implicit call to constructor
+
+  construct obj3(obj2); // Implicit call to copy constructor 
+
+  obj3.disp();  
+  
+  return 0;
+}
+```
 
 
