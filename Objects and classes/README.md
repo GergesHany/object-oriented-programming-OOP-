@@ -585,6 +585,24 @@ int main(){
 }
 ```
 
+### What is a structure pointer? 
+Like primitive types, we can have pointer to a structure. If we have a pointer to structure, members are accessed using arrow ( -> ) operator instead of the dot (.) operator.
+
+```cpp
+struct Point {
+    int x, y; 
+};
+
+int main(){
+
+   Point p1; // p1 is a variable of type Point
+   p1.x = p1.y = 10; // Accessing members of p1 using dot operator and assigning values to them
+ 
+   Point* p2 = &p1; // p2 is a pointer to a Point variable
+   
+   cout << p2 -> x << " " << p2 -> y << "\n"; // Accessing members of p1 using arrow operator
+}
+```
 
 
 
