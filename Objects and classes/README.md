@@ -472,12 +472,118 @@ int main()
 
 ```
 
+## Structures:
+A structure is a user-defined data type in C/C++. A structure creates a data type that can be used to group items of possibly different types into a single type. 
+
+![what-is-structure](https://user-images.githubusercontent.com/105644935/214913236-6c2d1b02-f05c-4fa0-8e90-737afa34ea52.png)
+
+The `struct` keyword is used to create a structure. The general syntax to create a structure is as shown below:  
+
+```cpp
+struct structureName{
+    member1;
+    member2;
+    member3;
+    .
+    .
+    .
+    memberN;
+};
+```
+
+### Structures in C++ can contain two types of members:  
+- Data Member: These members are normal C++ variables. We can create a structure with variables of different data types in C++.
+- Member Functions: These members are normal C++ functions. Along with variables, we can also include functions inside a structure declaration.
+
+Example 
+```cpp
+// Data Members
+int roll;
+int age;
+int marks;
+     
+// Member Functions
+void printDetails(){
+    cout << "Roll = " << roll << "\n";
+    cout << "Age = " << age << "\n";
+    cout << "Marks = " << marks << "\n";
+}
+```
+
+In the above structure, the data members are three integer variables to store roll number, age and marks of any student and the member function is printDetails() which is printing all of the above details of any student.
 
 
+## declare structure variables:
+
+A structure variable can either be declared with structure declaration or as a separate declaration like basic types.  
+
+```cpp
+// A variable declaration like basic data types
+struct Point{
+  int x, y;
+  Point(int X = 0, int Y = 0){
+     x = X, y = Y;
+  }
+};
+
+int main(){
+
+   Point p1; // The variable p2 is declared like a normal variable
+   struct Point p2; // The variable p1 is declared like a normal variable
+   
+   cout << p1.x << " " << p1.y << endl; // print the value of x and y
+   cout << p2.x << " " << p2.y << endl; // print the value of x and y
+
+   return 0;
+}
+```
+
+> **Note**
+In C++, the struct keyword is optional before in declaration of a variable. In C, it is mandatory.
+
+###  other syntax for declaring a member of a struct
+```cpp
+// A variable declaration like basic data types
+struct Point{
+  int x, y;
+  Point(int X = 0, int Y = 0){
+     x = X, y = Y;
+  }
+}p1; // The variable p1 is declared like a normal variable
+
+int main(){
+
+   p1.x = 10, p1.y = 20; // assign values to x and y   
+   cout << p1.x << " " << p1.y << endl; // print the value of x and y
+
+   return 0;
+}
+```
+
+### Structure members are accessed using dot (.) operator. `p1.x`
 
 
+## can make a array of struct:
+
+#### code
+```cpp
+struct Point {
+    int x, y; 
+};
 
 
+int main(){
+
+  Point arr[3]; // array of 3 points
+  for (int i = 0; i < 3; i++){
+    cin >> arr[i].x >> arr[i].y; // input x and y of point i
+  }
+
+  for (int i = 0; i < 3; i++){
+    cout << arr[i].x << " " << arr[i].y << "\n"; // output x and y of point i
+  }
+}
+```
 
 
 
