@@ -606,31 +606,31 @@ int main(){
 
 ## Difference between class and struct
 
-### Classes 
-- Can support inheritance
-- Are reference (pointer) types
-- The reference can be null
-- Have memory overhead per new instance
-
-
-### Structs 
-- Cannot support inheritance
-- Are value types
-- Are passed by value (like integers)
-- Cannot have a null reference (unless Nullable is used)
-- Do not have a memory overhead per new instance - unless 'boxed'
-
-### Both Classes and Structs:
-- Are compound data types typically used to contain a few variables that have some logical relationship
-- Can contain methods and events
-- Can support interfaces
-
-
+|     | Structs  | Classes |
+| :---: | :---: |  :---:   | 
+|Type| Value-type | Reference-type |
+|Where| On stack / Inline in containing type | On Heap |
+|Deallocation| Stack unwinds / containing type gets deallocated |Garbage Collected|
+|Arrays| Inline, elements are the actual instances of the value type | Out of line, elements are just references to instances of the reference type residing on the heap |
+|Al-Del Cost| Cheap allocation-deallocation | Expensive allocation-deallocation |
+|Memory usage| Boxed when cast to a reference type or one of the interfaces they implement, Unboxed when cast back to value type(Negative impact because boxes are objects that are allocated on the heap and are garbage-collected) | No boxing-unboxing |
+|Assignments| Copy entire data	 | Copy the reference |
+|Change to an instance| Does not affect any of its copies | Affect all references pointing to the instance |
+|Mutability| Should be immutable | Mutable |
+|Population| In some situations	 | Majority of types in a framework should be classes|
+|Lifetime|Short-lived|Long-lived|
+|Destructor|Cannot have|Can have|
+|Inheritance|Only from an interface	|Full support|
+|Polymorphism| No | Yes |
+|Sealed|No| When have sealed keyword (C#), or Sealed attribute (F#) |
+|Constructor|Can not have explicit parameterless constructors|Any constructor|
+|Null-assignments	|When marked with nullable question mark	|Yes (When marked with nullable question mark in C# 8+ and F# 5+ 1)|
+|Abstract|No|When have abstract keyword (C#), or AbstractClass attribute (F#)|
+|Member Access Modifiers|`public`, `private`, `internal`|`public`, `protected`, `internal`, `protected internal`, `private protected`|
 
 ## Apllication memory  
 
 ![M9c18](https://user-images.githubusercontent.com/105644935/215043588-e2f76e87-91b3-4ecf-b660-da59df56470f.png)
-
 
 | Structs  | Classes |
 | :---: | :---: |
@@ -644,6 +644,8 @@ int main(){
 | Function members can't be virtual or abstract. | Function members can be  |
 | Can't have a null value. | Can have a null value. |
 |  During an assignment, the contents are copied from one variable to another.  |  Assignment is happening by reference  |
+
+
 
 
 
