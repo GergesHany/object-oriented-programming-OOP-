@@ -629,6 +629,9 @@ int main(){
 
 ## Apllication memory  
 
+![M9c18](https://user-images.githubusercontent.com/105644935/215043588-e2f76e87-91b3-4ecf-b660-da59df56470f.png)
+
+
 | Structs  | Classes |
 | :---: | :---: |
 | 1 per Thread.       | 1 per application.  |
