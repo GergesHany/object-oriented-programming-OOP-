@@ -627,6 +627,20 @@ int main(){
 
 
 
+## Apllication memory  
+
+| Structs  | Classes |
+| :---: | :---: |
+| 1 per Thread.       | 1 per application.  |
+| Holds value types.  | Holds reference types.  |
+| Types in the stack are positioned using the LIFO principle  |  No type ordering (data is fragmented)  |
+| Can't have a default constructor and/or finalizer(destructor).  | Can have a default constructor and/or finalizer.  |
+| Can be created with or without a new operator.  |  Can be created only with a new operator.  |
+| Can't derive from the class or struct but can derive from the multiple interfaces  | Can have only one base class and/or  |
+| The data members can't be protected  |  Data members can be protected  |
+| Function members can't be virtual or abstract. | Function members can be  |
+| Can't have a null value. | Can have a null value. |
+|  During an assignment, the contents are copied from one variable to another.  |  Assignment is happening by reference  |
 
 
 
