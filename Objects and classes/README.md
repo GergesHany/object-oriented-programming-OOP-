@@ -1,5 +1,10 @@
 - [Objects and classes](#Objects-and-classes)
 - [Constructors](#Constructors)
+- [Destructor](#Destructor)
+- [Structures](#Structures)
+- [Difference between class and struct](#Difference-between-class-and-struct)
+- [new and delete](#new-and-delete)
+- [new and delete in class](#new-and-delete-in-class)
 
 # Objects and classes
 **Exist two main concepts in OOP: Classes and objects.**
@@ -829,7 +834,7 @@ It’s worth noting that dynamic memory allocation could lead to poor performanc
 
 <br>
 
-## using new and delete in class
+## new and delete in class
 
 ```cpp
 #include <bits/stdc++.h>
