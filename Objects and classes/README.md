@@ -647,6 +647,146 @@ int main(){
 
 
 
+# new and delete 
+
+### What is the new operator?
+
+The `new` operator in C++ is used to allocate memory dynamically for a variable or an object at runtime. This means that the memory is allocated during the execution of the program, as opposed to being allocated at compile time. When the “new” operator is called, it reserves a block of memory that is large enough to hold the object being created and then returns a pointer to the first byte of that memory block.
+
+Syntax: Here is the syntax of the new operator in C++ language.
+
+- Pointer_name = new datatype;
+```cpp
+int *ptr = new int; // Here is the syntax to initialize the memory,
+```
+
+- pointer_variable = new datatype(value);
+```cpp
+// Here is the syntax to allocate a block of memory.
+int *ptr = new int(10); // This means you have given 10 as the Value to the pointer ptr.
+```
+- pointer_variable = new datatype[size];
+```cpp
+int *ptr = new int[]; // This means the pointer will point to the base address of an array
+```
+
+### For example, the following code dynamically allocates memory for an integer and assigns the value 42 to it:
+```cpp
+int *p = new int; //allocate memory for an int
+
+*p = 42; //assign value 42 to the memory location
+```
+
+### Let’s understand it with example.
+```cpp
+#include <iostream>
+using namespace std; 
+int main() {
+    int* pInt = new int;   // dynamically allocate memory for an int
+    *pnt = 5;              // store the value 5 in the allocated memory
+    cout << *pnt;     // output the value stored in the allocated memory
+    delete pnt;            // deallocate the memory to prevent memory leak
+    return 0;
+}
+```
+
+#### Output: 5
+
+The new operator is used to dynamically allocate memory for the variable on the heap, which is a region of memory that remains allocated until explicitly deallocated using the delete operator. The pointer pnt is used to access the memory location where the int is stored.
+
+## What is a delete operator?
+
+The delete operator is used to deallocate memory that was previously allocated on the heap using new. It takes a pointer to the memory to be deallocated as an argument. For example:
+
+```cpp
+delete p; // Deallocates the memory pointed to by p
+```
+
+The `delete` operator is used to deallocate memory that the `new` operator previously allocated. Once a block of memory has been allocated by `new` it is important to deallocate it when it is no longer needed so that other parts of the program can reuse the memory. The “delete” operator releases the memory back to the system, and other parts of the program can use it.
+
+> **Note**: Use delete to deallocate memory allocated with new to avoid memory leaks.
+
+Memory leaks occur when the program allocates memory dynamically but does not deallocate it properly. This causes the program to consume more memory gradually, eventually leading to poor performance or even crashing the program.
+
+
+### New and delete operators example
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int* ptr1 = new int;   // dynamically allocate memory for an int
+  *ptr1 = 5;  // store the value 5 in the allocated memory
+   float *ptr2 = new float(20.324); // dynamically allocate memory for a float and initialize it to 20.324
+   int *ptr3 = new int[28]; // dynamically allocate memory for an array of 28 integers
+   cout << "Value of pointer variable 1 : " << *ptr1 << endl; // output the value stored in the allocated memory
+   cout << "Value of pointer variable 2 : " << *ptr2 << endl; // output the value stored in the allocated memory
+   if (ptr3 == NULL) // check if the memory has been successfully allocated by new operator
+     cout << "Allocation of memory failed\n";
+   
+   else {
+    for (int i = 1; i < 15; i++)
+     ptr3[i] = i + 1; // store values in the allocated memory
+     cout << "Value of store in block of memory: ";
+     for (int i = 1; i < 15; i++)
+      cout << ptr3[i] << " "; // output the values of the allocated memory
+  }
+
+  cout << *ptr1;     // output the value stored in the allocated memory
+  delete ptr1; // deallocate the memory to prevent memory leak
+  delete ptr2; // deallocate the memory to prevent memory leak
+  delete ptr3; // deallocate the memory to prevent memory leak
+  return 0;
+
+}
+```
+
+```cpp
+Output
+Value of pointer variable 1 : 5
+
+Value of pointer variable 2 : 20.324
+
+Value of store in block of memory: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 5
+```
+
+### Explanation of code
+
+- The first line uses the `new` operator to allocate memory dynamically for an integer variable and assigns the allocated memory address to the pointer variable ptr1. The value 5 is stored in the allocated memory using the pointer variable ptr1.
+
+- The second line uses the `new` operator to allocate memory for a float variable dynamically, and assigns the allocated memory address to the pointer variable ptr2. The value 20.324 is also assigned to this pointer.
+
+- The third line uses the `new` operator to dynamically allocate memory for an array of 28 integers and assigns the allocated memory address to the pointer variable ptr3.Then the code uses  cout to output the values stored in the allocated memory for the pointer variables ptr1, ptr2, and ptr3.
+
+
+- In the final lines of the code, the `delete` operator is used to deallocate the memory allocated for the pointer variables ptr1, ptr2, and ptr3 to prevent memory leaks.
+
+
+- It’s worth noting that in the case of the array (ptr3), the code uses the if (ptr3 == NULL) statement to check if the memory allocation was successful or not, otherwise it will store values in the array and output the values stored in the array using a for a loop.
+
+<br>
+
+## When to do dynamic memory allocation?
+
+- When the size of the data structure needs to change at runtime: For example, if a program needs to store a large number of items in an array, and the number of items is not known at compile time, dynamic memory allocation can be used to create an array of the appropriate size.
+
+- When working with complex data structures: Dynamic memory allocation can be used to create linked lists, trees, and other complex data structures that require a flexible amount of memory.
+
+- When working with polymorphic objects: Dynamic memory allocation is often used to create objects of different types at runtime. For example, a program might use dynamic memory allocation to create objects of different classes inherited from a common base class.
+
+- When working with large data sets: Dynamic memory allocation can handle large data sets that cannot fit in the stack memory.
+
+- When memory is being used very efficiently: Dynamic memory allocation can ensure that the program uses only as much memory as it needs, rather than allocating a fixed amount of memory at compile time.
+
+<br>
+
+> **Warning**
+It’s worth noting that dynamic memory allocation could lead to poor performance if not used carefully. It could cause memory leaks if the allocated memory is not deallocated properly.
+
+
+
 
 
 
