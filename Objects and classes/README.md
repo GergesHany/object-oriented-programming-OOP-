@@ -1,5 +1,5 @@
-[Objects and classes](Objects-and-classes)
-[Constructors](Constructors)
+[Objects and classes](-Objects-and-classes)
+[Constructors](-Constructors)
 
 
 
