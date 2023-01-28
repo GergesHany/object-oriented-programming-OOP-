@@ -768,6 +768,45 @@ Value of store in block of memory: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 5
 
 <br>
 
+### other code for pointers
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+int main()
+{
+  
+  int *p; // pointer to int
+  p = new int; // allocate new int for this variable
+  *p = 10; // assign value to pointer
+  
+  cout << p << "\n"; // address
+  cout << *p << "\n"; // value
+  cout << &p << "\n"; // address of pointer ->> address of new int for this variable
+  cout << &*p << "\n\n"; // address of value (*&p = p) 
+
+
+  int arr[5] = {1, 2, 3, 4, 5};
+  cout << arr << "\n"; // address of first element
+  cout << arr + 1 << "\n"; // address of second element
+
+  cout << *arr << " "; // value of first element
+  cout << *(arr + 1) << "\n\n"; // value of second element
+  
+  for (int i = 0; i < 5; i++){
+     cout << *(arr + i) << " \n"[i == 4]; // value of each element
+  }
+
+  p = arr; // pointer to array (like pointer to first element of array)
+  for (int i = 0; i < 5; i++){
+     cout << *(p++) << " \n"[i == 4]; // value of each element
+  }   
+
+  return 0;
+}
+```
+
 ## When to do dynamic memory allocation?
 
 - When the size of the data structure needs to change at runtime: For example, if a program needs to store a large number of items in an array, and the number of items is not known at compile time, dynamic memory allocation can be used to create an array of the appropriate size.
@@ -785,8 +824,54 @@ Value of store in block of memory: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 5
 > **Warning**
 It’s worth noting that dynamic memory allocation could lead to poor performance if not used carefully. It could cause memory leaks if the allocated memory is not deallocated properly.
 
+<br>
+
+## using new and delete in class
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std; 
+
+// create a class Rectangle
+class Rectangle{
+  private:
+    int *wight, *hight; // pointer to wight and hight
+  
+  public:
+    Rectangle(int, int); // constructor with two parameters wight and hight 
+   ~Rectangle(); // destructor to free the memory
+    int area(){ // function to calculate the area
+        return  *wight * *hight;
+    }
+};
+
+// constructor to initialize the wight and hight with the parameters passed to it 
+Rectangle::Rectangle(int a, int b){
+    wight = new int; // allocate memory for wight
+    hight = new int; // allocate memory for hight
+    *wight = a; // assign the value of a to wight
+    *hight = b; // assign the value of b to hight
+}
+
+// destructor to free the memory
+Rectangle::~Rectangle(){
+    delete hight; // free the memory of hight
+    delete wight; // free the memory of wight
+}
+
+int main()
+{
+  
+  Rectangle r(10, 20); // create an object of class Rectangle with wight = 10 and hight = 20
+  cout << r.area() << "\n"; // print the area of the rectangle
+  Rectangle *p = new Rectangle(10, 20); // create a pointer to an object of class Rectangle with wight = 10 and hight = 20
+  cout << p -> area(); // print the area of the rectangle
+  delete p; // free the memory of the pointer p
 
 
+  return 0;
+}
+```
 
 
 
