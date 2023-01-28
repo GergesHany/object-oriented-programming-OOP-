@@ -1,3 +1,8 @@
+[Objects and classes](Objects-and-classes)
+[Constructors](Constructors)
+
+
+
 # Objects and classes
 **Exist two main concepts in OOP: Classes and objects.**
 
