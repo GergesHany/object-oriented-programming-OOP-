@@ -659,7 +659,7 @@ int main(){
 
 ### What is the new operator?
 
-The `new` operator in C++ is used to allocate memory dynamically for a variable or an object at runtime. This means that the memory is allocated during the execution of the program, as opposed to being allocated at compile time. When the “new” operator is called, it reserves a block of memory that is large enough to hold the object being created and then returns a pointer to the first byte of that memory block.
+The `new` operator in C++ is used to allocate memory dynamically for a variable or an object at runtime. This means that the memory is allocated during the execution of the program, as opposed to being allocated at compile time. When the `new` operator is called, it reserves a block of memory that is large enough to hold the object being created and then returns a pointer to the first byte of that memory block.
 
 Syntax: Here is the syntax of the new operator in C++ language.
 
@@ -710,7 +710,7 @@ The delete operator is used to deallocate memory that was previously allocated o
 delete p; // Deallocates the memory pointed to by p
 ```
 
-The `delete` operator is used to deallocate memory that the `new` operator previously allocated. Once a block of memory has been allocated by `new` it is important to deallocate it when it is no longer needed so that other parts of the program can reuse the memory. The “delete” operator releases the memory back to the system, and other parts of the program can use it.
+The `delete` operator is used to deallocate memory that the `new` operator previously allocated. Once a block of memory has been allocated by `new` it is important to deallocate it when it is no longer needed so that other parts of the program can reuse the memory. The `delete` operator releases the memory back to the system, and other parts of the program can use it.
 
 > **Note**: Use delete to deallocate memory allocated with new to avoid memory leaks.
 
