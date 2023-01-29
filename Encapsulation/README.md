@@ -29,7 +29,109 @@ Encapsulation also leads to [data abstraction](https://github.com/GergesHany/obj
 
 <br>
 
-### In C++, encapsulation can be implemented using classes and `access modifiers`.
+#### In C++, encapsulation can be implemented using classes and `access modifiers`.
+
+Example:
+```cpp
+// Encapsulation
+#include <iostream>
+using namespace std;
+
+class Encapsulation {
+private:
+  // Data hidden from outside world
+  int x;
+
+public:
+  // Function to set value of variable x
+  void set(int a) { x = a; }
+
+  // Function to return value of variable x
+  int get() { return x; }
+};
+
+int main()
+{
+	
+  Encapsulation obj; // Creating object of class
+  obj.set(5); // Setting value of variable x using member function
+  cout << obj.get(); // Getting value of variable x using member function
+
+	return 0;
+}
+```
+```cpp
+Output: 5
+```
+
+
+### Explanation: 
+In the above program, the variable x is made private. This variable can be accessed and manipulated only using the functions get() and set() which are present inside the class. Thus we can say that here, the variable x and the functions get() and set() are bound together which is nothing but encapsulation.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// declaring class
+class Circle {
+	// access modifier
+private:
+  // Data Member
+  float area;
+  float radius;
+
+public:
+  // Member Function
+  
+  void getRadius(){
+    cout << "Enter radius ";
+    cin >> radius;
+    cout << "\n";
+  }
+
+  void findArea(){
+    area = 3.14 * radius * radius; // formula of area of circle to find area
+    cout << "Area of circle = " << area << "\n";
+  }
+};
+int main()
+{
+  Circle cir; // creating instance(object) of class
+  cir.getRadius(); // calling function
+  cir.findArea(); // calling function
+}
+```
+
+```cpp
+Output:
+
+Enter radius -> (for example radius equal 10)   
+Area of circle = 314
+
+```
+
+
+### Role of Access Specifiers in Encapsulation
+
+Access specifiers facilitate Data Hiding in C++ programs by restricting access to the class member functions and data members. There are three types of access specifiers in C++:
+
+- Private
+- Protected
+- Public
+
+By default, all data members and member functions of a class are made private by the compiler.
+
+Points to Consider
+As we have seen in the above example, access specifiers play an important role in implementing encapsulation in C++. The process of implementing encapsulation can be sub-divided into two steps:
+
+- Creating a class to encapsulate all the data and methods into a single unit.
+- Hiding relevant data using access specifiers.
+
+
+
+
+
+
 
 
 
