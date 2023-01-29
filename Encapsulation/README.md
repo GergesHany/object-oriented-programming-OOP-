@@ -28,7 +28,7 @@ This is what `Encapsulation` is. Here the data of the sales section and the empl
 Encapsulation also leads to [data abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/blob/main/abstraction/README.md). Using encapsulation also hides the data, as in the above example, the data of the sections like sales, finance, or accounts are hidden from any other section.
 
 
-
+In C++, encapsulation can be implemented using classes and `access modifiers`.
 
 
 
