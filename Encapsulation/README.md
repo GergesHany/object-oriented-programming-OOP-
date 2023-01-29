@@ -25,7 +25,7 @@ This is what `Encapsulation` is. Here the data of the sales section and the empl
 ![encapsulation-image](https://user-images.githubusercontent.com/105644935/215284659-5203cf23-347f-4e95-8ad8-d8141df3a490.jpg)
 
 
-Encapsulation also leads to `data abstraction`. Using encapsulation also hides the data, as in the above example, the data of the sections like sales, finance, or accounts are hidden from any other section.
+Encapsulation also leads to [data abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/blob/main/abstraction/README.md). Using encapsulation also hides the data, as in the above example, the data of the sections like sales, finance, or accounts are hidden from any other section.
 
 
 
