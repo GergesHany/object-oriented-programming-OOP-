@@ -3,7 +3,7 @@
 1. [Introduction](#OOP)
 2. [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
 3. [Encapsulation](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Encapsulation)  
-4. **Abstraction**  
+4. [Abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/abstraction) 
 5. **Inheritance**  
 6. **Polymorphism**
 <br> 
