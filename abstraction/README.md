@@ -1,4 +1,4 @@
-- [Abstraction in C++](#Abstraction-in-C++)
+- [Abstraction in C++](#Abstraction)
 - [Types of Abstraction](#Types-of-Abstraction)
 - [Abstraction-using-Classes](#Abstraction-using-Classes)
 - [Abstraction in Header files](#Abstraction-in-Header-files)
