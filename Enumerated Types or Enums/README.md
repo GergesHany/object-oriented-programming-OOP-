@@ -47,24 +47,24 @@ using namespace std;
 
 int main()
 {
-	// Defining enum Gender
-	enum Gender { Male, Female };
+  // Defining enum Gender
+  enum Gender { Male, Female };
 
-	// Creating Gender type variable
-	Gender gender = Male;
+  // Creating Gender type variable
+  Gender gender = Male;
 
-	switch (gender)
-	{
-	case Male:
-		cout << "Gender is Male";
-		break;
-	case Female:
-		cout << "Gender is Female";
-		break;
-	default:
-		cout << "Value can be Male or Female";
-	}
-	return 0;
+  switch (gender)
+  {
+    case Male:
+     cout << "Gender is Male";
+     break;
+    case Female:
+     cout << "Gender is Female";
+     break;
+    default:
+     cout << "Value can be Male or Female";
+  }
+return 0;
 }
 ```
 `Output: Gender is Male`
@@ -82,11 +82,10 @@ enum year { Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
 // Driver Code
 int main()
 {
-	// Traversing the year enum
-	for (int i = Jan; i <= Dec; i++)
-		cout << i << " ";
-
-	return 0;
+   // Traversing the year enum
+   for (int i = Jan; i <= Dec; i++)
+     cout << i << " ";
+  return 0;
 }
 ```
 `Output: 0 1 2 3 4 5 6 7 8 9 10 11`
@@ -105,11 +104,11 @@ enum year { Jan = 1, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
 // Driver Code
 int main()
 {
-	// Traversing the year enum
-	for (int i = Jan; i <= Dec; i++)
-		cout << i << " ";
+  // Traversing the year enum
+  for (int i = Jan; i <= Dec; i++)
+    cout << i << " ";
 
-	return 0;
+   return 0;
 }
 ```
 `Output: 1 2 3 4 5 6 7 8 9 10 11 12`
