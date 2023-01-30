@@ -1,10 +1,10 @@
-- [Abstraction](#Abstraction-in-C++)
+- [Abstraction in C++](#Abstraction-in-C++)
 - [Types of Abstraction](#Types-of-Abstraction)
 - [Abstraction-using-Classes](#Abstraction-using-Classes)
 - [Abstraction in Header files](#Abstraction-in-Header-files)
 - [Abstraction using Access Specifiers](#Abstraction-using-Access-Specifiers)
 - [Advantages of Data Abstraction](#Advantages-of-Data-Abstraction)
-- [Difference between Abstraction and Encapsulation](#Difference-between-Abstraction-and-Encapsulation-in-C++)
+- [Difference between Abstraction and Encapsulation in C++](#Difference-between-Abstraction-and-Encapsulation-in-C++)
 
 
 
