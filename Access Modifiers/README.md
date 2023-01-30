@@ -3,6 +3,7 @@
 - [Private](#Private)
 - [Protected](#Protected)
 
+![Access-Modifiers](https://user-images.githubusercontent.com/105644935/215430939-4c5cf7ca-3196-40f9-b048-5f6bee7c550a.png)
 
 
 ## Access modifiers:
