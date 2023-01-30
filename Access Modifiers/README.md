@@ -1,3 +1,10 @@
+- [Access modifiers](#Access-modifiers)
+- [Public](#Public)
+- [Private](#Private)
+- [Protected](#Protected)
+
+
+
 ## Access modifiers:
 Access modifiers are used to implement an important aspect of Object-Oriented Programming known as Data Hiding. Consider a real-life example: 
 The Research and Analysis Wing (R&AW), having 10 core members, has come into possession of sensitive confidential information regarding national security. Now we can correlate these core members to data members or member functions of a class, which in turn can be correlated to the R&A Wing. These 10 members can directly access the confidential information from their wing (the class), but anyone apart from these 10 members can’t access this information directly, i.e., outside functions other than those prevalent in the class itself can’t access the information (that is not entitled to them) without having either assigned privileges (such as those possessed by a friend class or an inherited class, as will be seen in this article ahead) or access to one of these 10 members who is allowed direct access to the confidential information (similar to how private members of a class can be accessed in the outside world through public member functions of the class that have direct access to private members). This is what data hiding is in practice. 
@@ -179,36 +186,36 @@ using namespace std;
 class Parent{
 	
   // protected data members
-	protected:
-	 int id_protected;
+  protected: 
+   int id_protected;
 	
 };
 
 
 // sub class or derived class from public base class
 class Child : public Parent{ // inheritance from public base class Parent 
-	public:
-    void setId(int id){
-      // Child class is able to access the inherited protected data members of base class
-      id_protected = id;
-    }
-	
-    void displayId(){
-      cout << "id_protected is: " << id_protected << "\n";
-    }
+ public:
+  void setId(int id){
+    // Child class is able to access the inherited protected data members of base class
+    id_protected = id;
+  }
+
+  void displayId(){
+    cout << "id_protected is: " << id_protected << "\n";
+  }
 };
 
 int main() {
 	
-	Child obj1; // object of the derived class
-	
-	// member function of the derived class can
-	// access the protected data members of the base class
-	
-	obj1.setId(81); // calling the public function of the derived class
-	obj1.displayId(); // calling the public function of the derived class
+  Child obj1; // object of the derived class
 
-	return 0;
+  // member function of the derived class can
+  // access the protected data members of the base class
+
+  obj1.setId(81); // calling the public function of the derived class
+  obj1.displayId(); // calling the public function of the derived class
+
+  return 0;
 }
 ```
 
