@@ -36,7 +36,7 @@ Encapsulation also leads to [data abstraction](https://github.com/GergesHany/obj
 
 <br>
 
-#### In C++, encapsulation can be implemented using classes and [access modifiers](https://github.com/GergesHany/object-oriented-programming-OOP-/blob/main/Access%20Modifiers/README.md#Protected)
+#### In C++, encapsulation can be implemented using classes and [access modifiers](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Access%20Modifiers)
 
 Example:
 ```cpp
