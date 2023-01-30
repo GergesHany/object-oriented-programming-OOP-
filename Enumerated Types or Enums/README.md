@@ -113,7 +113,47 @@ int main()
 ```
 `Output: 1 2 3 4 5 6 7 8 9 10 11 12`
 
+## Examlpe for Enum and class
+```cpp
+// protected access modifier
+#include <bits/stdc++.h>
+using namespace std;
 
+// enumaration
+enum days {sunday = 1, monday, tuesday, wednesday, thursday, friday, saturday};
+// array of strings 
+string dayss[7] = {"sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"};
+
+// class week
+class week{
+  days d[7]; // array of days
+
+ public:
+  // constructor to initialize the array of days
+  week(days Days[7]){
+    for(int i = 0; i < 7; i++) 
+      d[i] = Days[i];
+  }
+
+  void print(){
+    for(int i = 0; i < 7; i++)  
+      cout << d[i] << " " << dayss[i] << "\n";
+  }
+
+};
+
+
+int main() {
+	
+  // array of days
+  days d[7] = {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+  week w(d); // object of week class
+  w.print(); // print the days
+
+ return 0;
+}
+
+```
 
 
 
