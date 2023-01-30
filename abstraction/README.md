@@ -1,3 +1,13 @@
+- [Abstraction](#Abstraction-in-C++)
+- [Types of Abstraction](#Types-of-Abstraction)
+- [Abstraction-using-Classes](#Abstraction-using-Classes)
+- [Abstraction in Header files](#Abstraction-in-Header-files)
+- [Abstraction using Access Specifiers](#Abstraction-using-Access-Specifiers)
+- [Advantages of Data Abstraction](#Advantages-of-Data-Abstraction)
+- [Difference between Abstraction and Encapsulation](#Difference-between-Abstraction-and-Encapsulation-in-C++)
+
+
+
 ## Abstraction in C++
 
 Data abstraction is one of the most essential and important features of object-oriented programming in C++. Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation. 
@@ -74,6 +84,26 @@ You can see in the above program we are not allowed to access the variables a an
 - Can change the internal implementation of the class independently without affecting the user.
 - Helps to increase the security of an application or program as only important details are provided to the user.
 - It reduces the complexity as well as the redundancy of the code, therefore increasing the readability.
+
+<br><br>
+
+
+## Difference between Abstraction and Encapsulation in C++
+
+| Abstraction  | Encapsulation |
+| :---: | :---: |
+| 1. Abstraction is the process or method of gaining the information.   | While encapsulation is the process or method to contain the information  |
+| 2. In abstraction, problems are solved at the design or interface level.  | While in encapsulation, problems are solved at the implementation level. |
+| 3. Abstraction is the method of hiding the unwanted information.  | Whereas encapsulation is a method to hide the data in a single entity or unit along with a method to protect information from outside.  |
+| 4. We can implement abstraction using abstract class and interfaces. | Whereas encapsulation can be implemented using by access modifier i.e. private, protected and public. |
+| 5. In abstraction, implementation complexities are hidden using abstract classes and interfaces. | While in encapsulation, the data is hidden using methods of getters and setters. |
+| 6. The objects that help to perform abstraction are encapsulated. | Whereas the objects that result in encapsulation need not be abstracted. |
+
+
+
+
+
+
 
 
 
