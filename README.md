@@ -1,6 +1,6 @@
 # Content
 
-1. [Introduction](#OOP)
+1. [Introduction](#Object-oriented-programming)
 2. [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
 3. [Encapsulation](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Encapsulation)  
 4. [Abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/abstraction) 
@@ -8,7 +8,7 @@
 6. **Polymorphism**
 <br> 
 
-## Object-oriented programming: <a name="OOP"></a>
+## Object-oriented programming:
 
 Is a programming paradigm in which programs are organized around data, or based on the concept "objects", rather than functions and logic.
 
