@@ -68,7 +68,7 @@ Area is: 94.985
 In the above program, the data member radius is declared as public so it could be accessed outside the class and thus was allowed access from inside main(). 
 
 - ## Private
-Private: The class members declared as private can be accessed only by the member functions inside the class. They are not allowed to be accessed directly by any object or function outside the class. Only the member functions or the `friend` functions are allowed to access the private data members of the class. 
+Private: The class members declared as private can be accessed only by the member functions inside the class. They are not allowed to be accessed directly by any object or function outside the class. Only the member functions or the [friend functions](https://github.com/GergesHany/object-oriented-programming-OOP-/blob/main/friend%20function%20and%20friend%20class/README.md#friend-class) are allowed to access the private data members of the class. 
 
 Example: 
 
