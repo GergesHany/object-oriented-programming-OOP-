@@ -5,7 +5,7 @@
 - [Difference between class and struct](#Difference-between-class-and-struct)
 - [new and delete](#new-and-delete)
 - [new and delete in class](#new-and-delete-in-class)
-- [Static data members in C++](#Static-data-members-in-C++)
+- [Static data members](#Static-data-members)
 
 # Objects and classes
 **Exist two main concepts in OOP: Classes and objects.**
@@ -883,7 +883,7 @@ int main()
 ```
 
 
-## Static data members in C++
+## Static data members
 
 Static data members are class members that are declared using static keywords. A static member has certain special characteristics. These are:
 
