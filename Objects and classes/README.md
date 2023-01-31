@@ -6,6 +6,7 @@
 - [new and delete](#new-and-delete)
 - [new and delete in class](#new-and-delete-in-class)
 - [Static data members](#Static-data-members)
+- [Const member functions](#Const-member-functions)
 
 # Objects and classes
 **Exist two main concepts in OOP: Classes and objects.**
@@ -1066,7 +1067,288 @@ int main()
 `Output: A's constructor called`
 
 
+<br>
 
+## Const member functions
+
+Constant member functions are those functions that are denied permission to change the values of the data members of their class. To make a member function constant, the keyword “const” is appended to the function prototype and also to the function definition header.
+
+Like member functions and member function arguments, the objects of a class can also be declared as const. an object declared as const cannot be modified and hence, can invoke only const member functions as these functions ensure not to modify the object. 
+A const object can be created by prefixing the const keyword to the object declaration. Any attempt to change the data member of const objects results in a compile-time error. 
+
+
+Syntax: 
+
+-  For function declaration within a class.
+```cpp
+
+<return_type> <function_name>() const
+
+Example:
+int get_data() const;
+```
+
+- For function definition within the class declaration.
+```cpp
+<return_type> <function_name>() const{
+         //function body
+}
+
+Example:
+int get_data() const{
+    //function body
+}
+```
+
+- For function definition outside the class.
+```cpp
+<return_type> <class_name> : : <function_name>() const{
+      //function body
+}
+
+Example:
+int Demo :: get_data() const {
+  //function body
+}
+```
+
+- When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.
+
+- Whenever an object is declared as const, it needs to be initialized at the time of declaration. however, the object initialization while declaring is possible only with the help of constructors.
+
+
+A function becomes const when the const keyword is used in the function’s declaration. The idea of const functions is not to allow them to modify the object on which they are called. It is recommended practice to make as many functions const as possible so that accidental changes to objects are avoided.
+
+<br>
+
+
+### Following is a simple example of a const function. 
+
+```cpp
+// Example: Not a constant member function.
+#include<iostream>
+using namespace std;
+
+// create a class
+class Demo{
+private: // private data member
+   int x;
+
+public:
+  // member function to set value of x
+  void set_data(int a){
+     x = a;
+  }
+
+  // member function to get value of x
+  int get_data(){
+    return ++x;
+  }
+};
+
+
+main()
+{
+
+  Demo d; // create object of Demo class
+  d.set_data(10); // set value of x using member function
+  cout << d.get_data() << "\n"; // get value of x using member function
+
+  return 0;
+}
+```
+`Output: 11`
+
+<br>
+
+```cpp
+// Example: Not a constant member function.
+#include<iostream>
+using namespace std;
+
+// create a class
+class Demo{
+private: // private data member
+   int x;
+
+public:
+   // member function to set value of x
+   void set_data(int a){
+     x = a;
+   }
+
+   // member function to get value of x
+   int get_data() const {
+	return ++x;
+   }
+
+};
+
+
+main()
+{
+
+   Demo d; // create object of Demo class
+   d.set_data(10); // set value of x using member function
+   cout << d.get_data() << "\n"; // get value of x using member function
+
+   return 0;
+}
+```
+
+```cpp
+Output:
+In member function 'int Demo::get_data() const':
+error: increment of member 'Demo::x' in read-only object ++x // Error while attempting to modify the data member
+```
+
+<br>
+
+```cpp
+// Example: Not a constant member function.
+#include<iostream>
+using namespace std;
+
+// create a class
+class Demo{
+private: // private data member
+  int x;
+
+public:
+  // member function to set value of x
+  void set_data(int a);
+  // member function to get value of x
+  int get_data() const;
+};
+
+// member function definition
+void Demo::set_data(int a){
+  x = a;
+}
+
+// member function definition
+int Demo::get_data() const {
+  return x;
+}
+
+main()
+{
+
+   Demo d; // create object of Demo class
+   d.set_data(10); // set value of x using member function
+  cout << d.get_data() << "\n"; // get value of x using member function
+
+  return 0;
+}
+```
+`Output: 10:
+
+<br>
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Test {
+private:   
+  int value; // private member variable
+
+public:
+   // constructor
+   Test(int v = 0) { 
+     value = v; 
+   }
+   // getter function to get value of private member variable
+  int getValue() const { 
+    return value; 
+  }
+};
+
+int main()
+{
+	
+  Test t(20); // create object of class Test
+  cout << t.getValue(); // print value of private member variable
+
+  return 0;
+}
+```
+
+`Output: 20`
+
+When a function is declared as const, it can be called on any type of object. Non-const functions can only be called by non-const objects. 
+
+For example, the following program has compiler errors.  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Test {
+private:   
+  int value; // private member variable
+
+public:
+   // constructor
+   Test(int v = 0) { 
+     value = v; 
+   }
+   // getter function to get value of private member variable
+  int getValue() { 
+    return value; 
+  }
+};
+
+int main()
+{
+	
+  const Test t(20); // create object of class Test
+  cout << t.getValue(); // print value of private member variable
+
+  return 0;
+}
+```
+
+```cpp
+Output:
+'int main()':
+error: passing 'const Test' as 'this' argument of 'int Test::getValue()' discards qualifiers [-fpermissive]    
+cout << t.getValue();
+```
+
+Let’s look at another example:  
+
+```cpp
+
+#include <iostream>
+using namespace std;
+
+class Test {
+private:   
+  int value; // private member variable
+
+public:
+   // constructor
+   Test(int v = 0) { 
+     value = v; 
+   }
+   // getter function to get value of private member variable
+  int getValue() const { 
+    return value; 
+  }
+};
+
+int main()
+{
+	
+  const Test t(20); // create object of class Test
+  cout << t.getValue(); // print value of private member variable
+
+  return 0;
+}
+
+```
+`Output: 20`
 
 
 
