@@ -10,7 +10,7 @@
 
 ## Object-oriented programming:
 
-Is a programming paradigm in which programs are organized around data, or based on the concept "objects", rather than functions and logic.
+Is a programming paradigm in which programs are organized around data, or based on the concept `objects`, rather than functions and logic.
 
 Basically an object can be defined as a data (attributes or properties) and behaviors (methods)
 
