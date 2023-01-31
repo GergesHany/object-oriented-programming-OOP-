@@ -1,14 +1,14 @@
-- [Abstraction in C++](#Abstraction)
+- [Abstraction](#Abstraction)
 - [Types of Abstraction](#Types-of-Abstraction)
 - [Abstraction-using-Classes](#Abstraction-using-Classes)
 - [Abstraction in Header files](#Abstraction-in-Header-files)
 - [Abstraction using Access Specifiers](#Abstraction-using-Access-Specifiers)
 - [Advantages of Data Abstraction](#Advantages-of-Data-Abstraction)
-- [Difference between Abstraction and Encapsulation](#Difference-between-Abstraction-and-Encapsulation-in-C++)
+- [Difference between Abstraction and Encapsulation](#Difference-between-Abstraction-and-Encapsulation)
 
 
 
-## Abstraction in C++
+## Abstraction
 
 Data abstraction is one of the most essential and important features of object-oriented programming in C++. Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only essential information about the data to the outside world, hiding the background details or implementation. 
 
@@ -88,7 +88,7 @@ You can see in the above program we are not allowed to access the variables a an
 <br><br>
 
 
-## Difference between Abstraction and Encapsulation in C++
+## Difference between Abstraction and Encapsulation
 
 | Abstraction  | Encapsulation |
 | :---: | :---: |
