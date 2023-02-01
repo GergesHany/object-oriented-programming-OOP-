@@ -5,7 +5,7 @@
 - [Why can’t the above-stated operators be overloaded](#Why-can’t-the-above-stated-operators-be-overloaded)
 - [Important points about operator overloading](#Important-points-about-operator-overloading)
 - [implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
-- [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary Arithmetic-Operators-overloading)
+- [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary-Arithmetic-Operators-overloading)
 
 
 ## Operator Overloading
