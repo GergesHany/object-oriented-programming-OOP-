@@ -1,7 +1,6 @@
 - [Operator Overloading](#Operator-Overloading)
-- [What is the difference between operator functions and normal functions](#What-is-the-difference-between-operator-functions-and-normal-functions?)
-- [Can we overload all operators](#Can-we-overload-all-operators?)
-- [Operators that can be overloaded](#Operators-that-can-be-overloaded)
+- [What is the difference between operator functions and normal functions](#What-is-the-difference-between-operator-functions-and-normal-functions)
+- [Can we overload all operators](#Can-we-overload-all-operators)
 - [Operators that can be overloaded](#Operators-that-can-be-overloaded)
 
 
@@ -80,11 +79,11 @@ int main()
 
 `Output: 12 + i9`
 
-## What is the difference between operator functions and normal functions?
+## What is the difference between operator functions and normal functions
 Operator functions are the same as normal functions. The only differences are, that the name of an operator function is always the operator keyword followed by the symbol of the operator and operator functions are called when the corresponding operator is used. 
 Following is an example of a global operator function. 
 
-## Can we overload all operators? 
+## Can we overload all operators
 Almost all operators can be overloaded except a few. Following is the list of operators that cannot be overloaded. 
 
 - sizeof
