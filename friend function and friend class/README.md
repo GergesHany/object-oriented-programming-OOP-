@@ -238,7 +238,7 @@ The order in which we define the friend function of another class is important a
 
 - A friend function is a special function in C++ that in spite of not being a member function of a class has the privilege to access the private and protected data of a class.
 
-- A friend function is a non-member function or ordinary function of a class, which is declared as a friend using the keyword “friend” inside the class. By declaring a function as a friend, all the access permissions are given to the function.
+- A friend function is a non-member function or ordinary function of a class, which is declared as a friend using the keyword `friend` inside the class. By declaring a function as a friend, all the access permissions are given to the function.
 
 - The keyword “friend” is placed only in the function declaration of the friend function and not in the function definition or call.
 
