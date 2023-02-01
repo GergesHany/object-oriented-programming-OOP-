@@ -6,6 +6,8 @@
 - [Important points about operator overloading](#Important-points-about-operator-overloading)
 - [implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
 - [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary-Arithmetic-Operators-overloading)
+- [implementation all Unary Assignment Operators overloading](#implementation-all-Unary-Assignment-Operators-overloading)
+
 
 
 ## Operator Overloading
@@ -453,9 +455,116 @@ int main() {
 
 ```
 
+output:
+- The complex number 1 is: 10 + i5
+- The complex number 2 is: -2 + i-4
+- The complex number 1 after pre-increment is: 11 + i6
+- The complex number 2 after pre-decrement is: 1 + i3
+- The complex number 1 after post-increment is: The complex number 2 after post-decrement is: 1 + i3
 
 
+## implementation all Unary Assignment Operators overloading
 
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+    real = r;
+    imag = i;
+  }
+  
+  // operator overloading for Assignment operator
+  complex operator = (const complex &c) {
+    real = c.real; // real part of complex number
+    imag = c.imag; // imaginary part of complex number
+    return *this; // return the current object 
+  }
+
+  // operator overloading for Addition operator
+  complex operator += (const complex &c) {
+    real += c.real; // add real part of complex number c to real part of current object
+    imag += c.imag;  // add imaginary part of complex number c to imaginary part of current object
+    return *this; // return the current object 
+  }
+
+  // operator overloading for Subtraction operator
+  complex operator -= (const complex &c) {
+    real -= c.real; // subtract real part of complex number c from real part of current object
+    imag -= c.imag; // subtract imaginary part of complex number c from imaginary part of current object
+    return *this; // return the current object
+  }
+
+  // operator overloading for Multiplication operator
+  complex operator *= (const complex &c) {
+    real *= c.real; // multiply real part of complex number c to real part of current object
+    imag *= c.imag; // multiply imaginary part of complex number c to imaginary part of current object
+    return *this; // return the current object
+  }
+
+  // operator overloading for Division operator
+  complex operator /= (const complex &c) {
+    // check if the divisor is zero or not 
+    if (c.real == 0 || c.imag == 0) {
+      // if the divisor is zero, print error message and return the current object	
+      cout << "Division by zero is not possible" << "\n";
+      return *this; 
+    }
+
+    real /= c.real; // divide real part of current object by real part of complex number c
+    imag /= c.imag; // divide imaginary part of current object by imaginary part of complex number c
+    return *this; // return the current object
+  }
+
+  // operator overloading for modulus operator
+  complex operator %= (const complex &c) {
+    real %= c.real; // modulus real part of current object by real part of complex number c
+    imag %= c.imag; // modulus imaginary part of current object by imaginary part of complex number c
+    return *this; // return the current object
+  }
+
+  // function to print the complex number
+  void print() {
+    cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+   
+   complex c1(10, 5), c2(2, 4);
+   c1 += c2;
+   cout << "The result of c1 += c2 is: "; c1.print();
+   c1 -= c2;
+   cout << "The result of c1 -= c2 is: "; c1.print();
+   c1 *= c2;
+   cout << "The result of c1 *= c2 is: "; c1.print();
+   c1 /= c2;
+   cout << "The result of c1 /= c2 is: "; c1.print();
+   c1 %= c2;
+   cout << "The result of c1 %= c2 is: "; c1.print();
+   c1 = c2;
+   cout << "The result of c1 = c2 is: "; c1.print();
+
+  return 0;
+}
+
+```
+
+output:
+- The result of c1 += c2 is: 12 + i9
+- The result of c1 -= c2 is: 10 + i5
+- The result of c1 *= c2 is: 20 + i20
+- The result of c1 /= c2 is: 10 + i5
+- The result of c1 %= c2 is: 0 + i1
+- The result of c1 = c2 is: 2 + i4
 
 
 
