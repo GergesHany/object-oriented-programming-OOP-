@@ -4,7 +4,9 @@
 - [Operators that can be overloaded](#Operators-that-can-be-overloaded)
 - [Why can’t the above-stated operators be overloaded](#Why-can’t-the-above-stated-operators-be-overloaded)
 - [Important points about operator overloading](#Important-points-about-operator-overloading)
-- [ implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
+- [implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
+- [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary Arithmetic-Operators-overloading)
+
 
 ## Operator Overloading
 
@@ -349,7 +351,107 @@ output:
 
 
 
+## implementation all Unary Arithmetic Operators overloading
 
+```cpp
+#include <iostream>
+using namespace std;
+
+// x++ -> is a post-increment operator
+// ++x -> is a pre-increment operator
+// x-- -> is a post-decrement operator
+// --x -> is a pre-decrement operator
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+    real = r;
+    imag = i;
+  }
+  
+  // operator overloading for unary arithmetic operators 
+
+
+  // unary + operator overloading to return the same object
+  complex operator + () {
+    return complex(real, imag);
+  }
+
+  // unary - operator overloading to return the negative object
+  complex operator - () {
+    return complex(-real, -imag);
+  }
+
+  // unary ++ operator overloading to return the incremented object pre-increment
+  complex operator ++ () {
+    return complex(++real, ++imag);
+  }
+
+  // unary -- operator overloading to return the decremented object pre-decrement
+  complex operator -- () {
+    return complex(--real, --imag);
+  }
+
+  // unary ++ operator overloading to return the incremented object post-increment
+  complex operator ++ (int) {
+    return complex(real++, imag++);
+  }
+
+  // unary -- operator overloading to return the decremented object post-decrement
+  complex operator -- (int) {
+    return complex(real--, imag--);
+  }
+
+  // print function to print the complex number
+  void print() {
+    cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+
+
+  complex c1(10, 5), c2(2, 4);
+
+  // calling unary + operator to return the same object
+  complex c3 = +c1;
+  cout << "The complex number 1 is: ";
+  c3.print();
+
+  // calling unary - operator to return the negative object
+  complex c4 = -c2;
+  cout << "The complex number 2 is: ";
+  c4.print();
+
+  // calling unary ++ operator to return the incremented object
+  complex c5 = ++c1;
+  cout << "The complex number 1 after pre-increment is: ";
+  c5.print();
+
+  // calling unary -- operator to return the decremented object
+  complex c6 = --c2;
+  cout << "The complex number 2 after pre-decrement is: ";
+  c6.print();
+
+  // calling unary ++ operator to return the incremented object
+  complex c7 = c1++;
+  cout << "The complex number 1 after post-increment is: ";
+
+  // calling unary -- operator to return the decremented object
+  complex c8 = c2--;
+  cout << "The complex number 2 after post-decrement is: ";
+  c8.print();
+
+  return 0;
+}
+
+```
 
 
 
