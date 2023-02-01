@@ -144,9 +144,9 @@ would not be able to guarantee that only one of the expressions was evaluated. T
 
 ## Important points about operator overloading 
 
-- 1) For operator overloading to work, at least one of the operands must be a user-defined class object.
-- 2) Assignment Operator: Compiler automatically creates a default assignment operator with every class. The default assignment operator does assign all members of the right side to the left side and works fine in most cases (this behaviour is the same as the copy constructor).
-- 3) Conversion Operator: We can also write conversion operators that can be used to convert one type to another type. 
+- For operator overloading to work, at least one of the operands must be a user-defined class object.
+- Assignment Operator: Compiler automatically creates a default assignment operator with every class. The default assignment operator does assign all members of the right side to the left side and works fine in most cases (this behaviour is the same as the copy constructor).
+- Conversion Operator: We can also write conversion operators that can be used to convert one type to another type. 
 
 
 
