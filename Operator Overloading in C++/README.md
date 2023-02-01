@@ -6,7 +6,7 @@
 - [Important points about operator overloading](#Important-points-about-operator-overloading)
 - [implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
 - [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary-Arithmetic-Operators-overloading)
-- [implementation all Unary Assignment Operators overloading](#implementation-all-Unary-Assignment-Operators-overloading)
+- [implementation all Bit-wise Operators overloading](#implementation-all-Bit-wise-Operators-overloading)
 
 
 
@@ -567,8 +567,116 @@ output:
 - The result of c1 = c2 is: 2 + i4
 
 
+## implementation all Bit-wise Operators overloading
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// bitwise operators overloading
+// left shift (<<) 1 << 2 = 4 (1 * pow(2, 2))  -> pow(2, 3) = 2 * 2 * 2 = 8
+// right shift (>>) 4 >> 2 = 1 (4 / pow(2, 2))
+// bitwise AND (&) 5 & 3 = 1 (0101 & 0011 = 0001)
+// bitwise OR (|) 5 | 3 = 7 (0101 | 0011 = 0111)
+// bitwise XOR (^) 5 ^ 3 = 6 (0101 ^ 0011 = 0110)
+// bitwise NOT (~) ~5 = -6 (00000000 00000000 00000000 00000101 = 11111111 11111111 11111111 11111010 + 1 = 11111111 11111111 11111111 11111011)
 
 
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+	real = r;
+	imag = i;
+  }
+  
+  // Bit- wise AND
+  complex operator & (complex const &obj) {
+	complex res;
+	res.real = real & obj.real;
+	res.imag = imag & obj.imag;
+	return res;
+  }
+
+  // Bit- wise OR
+  complex operator | (complex const &obj) {
+	complex res;
+	res.real = real | obj.real;
+	res.imag = imag | obj.imag;
+	return res;
+  }
+
+  // Bit- wise XOR
+  complex operator ^ (complex const &obj) {
+	complex res;
+	res.real = real ^ obj.real;
+	res.imag = imag ^ obj.imag;
+	return res;
+  }
+
+  // Bit- wise NOT
+  complex operator ~ () {
+	complex res;
+	res.real = ~real;
+	res.imag = ~imag;
+	return res;
+  }
+
+  // Bit- wise Left Shift
+  complex operator << (int const &obj) {
+	complex res;
+	res.real = real << obj;
+	res.imag = imag << obj;
+	return res;
+  }
+
+  // Bit- wise Right Shift
+  complex operator >> (int const &obj) {
+	complex res;
+	res.real = real >> obj;
+	res.imag = imag >> obj;
+	return res;
+  }
+
+  // function to print the complex number
+  void print() {
+	cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+   
+  complex c1(10, 5), c2(2, 4);
+  complex c3 = c1 & c2;
+  complex c4 = c1 | c2;
+  complex c5 = c1 ^ c2;
+  complex c6 = ~c1;
+  complex c7 = c1 << 2;
+  complex c8 = c1 >> 2;
+  cout << "The Bit- wise AND of c1 and c2 is: "; c3.print();
+  cout << "The Bit- wise OR of c1 and c2 is: "; c4.print();
+  cout << "The Bit- wise XOR of c1 and c2 is: "; c5.print();
+  cout << "The Bit- wise NOT of c1 is: "; c6.print();
+  cout << "The Bit- wise Left Shift of c1 is: "; c7.print();
+  cout << "The Bit- wise Right Shift of c1 is: "; c8.print();
+  
+
+  return 0;
+}
+```
+
+output:
+- The Bit- wise AND of c1 and c2 is: 2 + i4
+- The Bit- wise OR of c1 and c2 is: 10 + i5
+- The Bit- wise XOR of c1 and c2 is: 8 + i1
+- The Bit- wise NOT of c1 is: -11 + i-6
+- The Bit- wise Left Shift of c1 is: 40 + i20
+- The Bit- wise Right Shift of c1 is: 2 + i1
 
 
 
