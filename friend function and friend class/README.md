@@ -330,8 +330,7 @@ The friend function provides us with a way to access private data but it also ha
 
 
 
-
-
+![friend-func-vs-friend-class](https://user-images.githubusercontent.com/105644935/215818346-aa603789-6ec2-4cc7-b5b9-042621bc8aec.jpg)
 
 
 
