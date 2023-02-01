@@ -7,7 +7,7 @@
 
 ## Operator Overloading
 
-In C++, we can make operators work for user-defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can overload an operator ‘+’ in a class like String so that we can concatenate two strings by just using +. Other example classes where arithmetic operators may be overloaded are Complex Numbers, Fractional Numbers, Big Integer, etc.
+In C++, we can make operators work for user-defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. For example, we can overload an operator `+` in a class like String so that we can concatenate two strings by just using `+`. Other example classes where arithmetic operators may be overloaded are Complex Numbers, Fractional Numbers, Big Integer, etc.
 
 Operator overloading is a compile-time polymorphism. It is an idea of giving special meaning to an existing operator in C++ without changing its original meaning.
 
@@ -40,8 +40,8 @@ int main()
 
 ```
 
-In this example, we have 3 variables “a1”, “a2” and “a3” of type “class A”. Here we are trying to add two objects “a1” and “a2”, which are of user-defined type i.e. of type “class A” using the “+” operator. This is not allowed, because the addition operator “+” is predefined to operate only on built-in data types. But here, “class A” is a user-defined type, so the compiler generates an error. This is where the concept of “Operator overloading” comes in. 
-Now, if the user wants to make the operator “+” to add two class objects, the user has to redefine the meaning of the “+” operator such that it adds two class objects. This is done by using the concept “Operator overloading”. So the main idea behind “Operator overloading” is to use c++ operators with class variables or class objects. Redefining the meaning of operators really does not change their original meaning; instead, they have been given additional meaning along with their existing ones.
+In this example, we have 3 variables `a1`, `a2` and `a3` of type `class A`. Here we are trying to add two objects `a1` and `a2`, which are of user-defined type i.e. of type `class A` using the `+` operator. This is not allowed, because the addition operator `+` is predefined to operate only on built-in data types. But here, `class A` is a user-defined type, so the compiler generates an error. This is where the concept of `Operator overloading` comes in. 
+Now, if the user wants to make the operator `+` to add two class objects, the user has to redefine the meaning of the `+` operator such that it adds two class objects. This is done by using the concept `Operator overloading`. So the main idea behind `Operator overloading` is to use c++ operators with class variables or class objects. Redefining the meaning of operators really does not change their original meaning; instead, they have been given additional meaning along with their existing ones.
 
 ## A simple and complete example 
 
@@ -132,7 +132,54 @@ But, among them, there are some operators that cannot be overloaded. They are
 
 3. `Scope resolution (::):` This helps identify and specify the context to which an identifier refers by specifying a namespace. It is completely evaluated at runtime and works on names rather than values. The operands of scope resolution are note expressions with data types and CPP has no syntax for capturing them if it were overloaded. So it is syntactically impossible to overload this operator.
 
-4. Class member access operators `(.(dot), .* (pointer to member operator)):` The importance and implicit use of class member access operators can be understood through the following example:
+4. Class member access operators `(.(dot), .* (pointer to member operator)):` The importance and implicit use of class member access operators can be understood 
+ 
+ 
+## through the following example:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class ComplexNumber{
+private:
+  int real, imaginary; // real and imaginary part of the complex number
+
+public:
+  // Constructor to initialize the complex number
+  ComplexNumber(int real, int imaginary){
+    this -> real = real;  
+    this -> imaginary = imaginary;
+  }
+
+  void print(){
+    cout << real << " + i" << imaginary << "\n";
+  }
+
+  ComplexNumber operator+ (ComplexNumber c2){
+    ComplexNumber c3(0,0);
+    c3.real = this -> real + c2.real;
+    c3.imaginary = this -> imaginary + c2.imaginary;
+    return c3;
+  }
+};
+
+int main() {
+	
+	
+  ComplexNumber c1(3, 5), c2(2, 4); // 3 + i5 and 2 + i4
+  ComplexNumber c3 = c1 + c2; // 3 + i5 + 2 + i4
+  c3.print(); // print 5 + i9
+
+  return 0;
+}
+
+```
+
+`Output: 5 + i9`
+
+The statement ComplexNumber `c3 = c1 + c2` is internally translated as ComplexNumber `c3 = c1.operator+ (c2)` in order to invoke the operator function. The argument c1 is implicitly passed using the `.` operator. The next statement also makes use of the dot operator to access the member function print and pass c3 as an argument. Thus, in order to ensure a reliable and non-ambiguous system of accessing class members, the predefined mechanism using class member access operators is absolutely essential. Besides, these operators also work on names and not values and there is no provision (syntactically) to overload them.
+
 
 5. `Ternary or conditional (?:):` The ternary or conditional operator is a shorthand representation of an if-else statement. In the operator, the true/false expressions are only evaluated on the basis of the truth value of the conditional expression. conditional statement ? expression1 (if statement is TRUE) : expression2 (else)
 A function overloading the ternary operator for a class say ABC using the definition
@@ -144,14 +191,76 @@ would not be able to guarantee that only one of the expressions was evaluated. T
 
 ## Important points about operator overloading 
 
-- For operator overloading to work, at least one of the operands must be a user-defined class object.
-- Assignment Operator: Compiler automatically creates a default assignment operator with every class. The default assignment operator does assign all members of the right side to the left side and works fine in most cases (this behaviour is the same as the copy constructor).
-- Conversion Operator: We can also write conversion operators that can be used to convert one type to another type. 
+1. For operator overloading to work, at least one of the operands must be a user-defined class object.
+2. Assignment Operator: Compiler automatically creates a default assignment operator with every class. The default assignment operator does assign all members of the right side to the left side and works fine in most cases (this behaviour is the same as the copy constructor).
+3. Conversion Operator: We can also write conversion operators that can be used to convert one type to another type. 
 
+```cpp
+#include <iostream>
+using namespace std;
+class Fraction{
+private:
+  int num, den; // numerator and denominator
+public:
+  // Constructor
+  Fraction(int n, int d) { num = n; den = d; }
 
+  // Conversion operator: return float value of fraction
+  operator float() const {
+    return float(num) / float(den);
+  }
+};
 
+int main() {
+	
+  Fraction f(2, 5); // create fraction object
+  float val = f; // convert fraction to float using conversion operator
+  cout << val << '\n'; // print float value
 
+  return 0;
+}
+```
 
+`Output: 0.4`
+
+Overloaded conversion operators must be a member method. Other operators can either be the member method or the global method.
+
+4. Any constructor that can be called with a single argument works as a conversion constructor, which means it can also be used for implicit conversion to the class being constructed. 
+
+```cpp
+#include <iostream>
+using namespace std;
+class Point{
+private:
+	int x, y; // Two coordinates
+public:
+  // Constructor;
+  Point(int i = 0, int j = 0) {
+   x = i; y = j;
+ }
+  // print the coordinates
+  void print() {
+   cout << "x = " << x << ", y = " << y << '\n';
+  }
+};
+
+int main() {
+
+  Point t(20, 20); // Create a point with coordinates (20, 20)
+  t.print(); // Print the coordinates
+  t = 30; // Assign 30 to x and y with the default values
+  t.print(); // Print the coordinates
+  
+	return 0;
+}
+
+```
+
+```cpp
+Output:
+x = 20, y = 20
+x = 30, y = 0
+```
 
 
 
