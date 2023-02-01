@@ -110,16 +110,16 @@ But, among them, there are some operators that cannot be overloaded. They are
 
 ## Operators that can be overloaded
 
-- Binary Arithmetic     ->     `+, -, *, /, %`
-- Unary Arithmetic     ->     `+, -, ++, —`
-- Assignment     ->     `=, +=,*=, /=,-=, %=`
-- Bit- wise      ->     `& , | , << , >> , ~ , ^`
-- De-referencing     ->     `(->)`
-- Dynamic memory allocation and De-allocation     ->     `New, delete` 
-- Subscript     ->     `[ ]`
-- Function call     ->     `()`
-- Logical      ->     `&,  | |, !`
-- Relational     ->     `>, < , = =, <=, >=`
+- Binary Arithmetic     `->`     `(+, -, *, /, %)`
+- Unary Arithmetic     `->`     `(+, -, ++, —)`
+- Assignment     `->`    `(=, +=,*=, /=,-=, %=)`
+- Bit- wise      `->`     `(& , | , << , >> , ~ , ^)`
+- De-referencing     `->`     `(->)`
+- Dynamic memory allocation and De-allocation     ->     `(New, delete)` 
+- Subscript     `->`     `[ ]`
+- Function call     `->`     `()`
+- Logical      `->`     `(&,  | |, !)`
+- Relational     `->`     `(>, < , = =, <=, >=)`
 
 
 
