@@ -460,7 +460,7 @@ int main() {
 
 ```
 
-output:
+`output:`
 - The complex number 1 is: 10 + i5
 - The complex number 2 is: -2 + i-4
 - The complex number 1 after pre-increment is: 11 + i6
@@ -563,7 +563,7 @@ int main() {
 
 ```
 
-output:
+`output:`
 - The result of c1 += c2 is: 12 + i9
 - The result of c1 -= c2 is: 10 + i5
 - The result of c1 *= c2 is: 20 + i20
@@ -675,7 +675,7 @@ int main() {
 }
 ```
 
-output:
+`output:`
 - The Bit- wise AND of c1 and c2 is: 2 + i4
 - The Bit- wise OR of c1 and c2 is: 10 + i5
 - The Bit- wise XOR of c1 and c2 is: 8 + i1
@@ -725,7 +725,7 @@ int main() {
 }
 ```
 
-output:
+`output:`
 - 10 + i5
 - 10
 
@@ -770,7 +770,7 @@ int main() {
 
 ```
 
-output:
+`output:`
 - 10 + i5
 - 125
 
@@ -840,7 +840,7 @@ int main() {
 
 ```
 
-output:
+`output:`
 - The result of c1 || c2 is: 1 + i1
 - The result of c1 && c2 is: 1 + i1
 - The result of !c1 is: 0 + i0
@@ -930,14 +930,12 @@ int main() {
 }
 
 ```
-
-
-
-
-
-
-
-
-
+`output`
+- c1 is greater than c2
+- c2 is less than c1
+- c1 is not equal to c2
+- c1 is not equal to c2
+- c1 is greater than or equal to c2
+- c1 is greater than c2
 
 
