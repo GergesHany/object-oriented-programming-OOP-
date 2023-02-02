@@ -4,8 +4,13 @@
 2. [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)    
 3. [Encapsulation](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Encapsulation)  
 4. [Abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/abstraction) 
-5. **Inheritance**  
-6. **Polymorphism**
+5. [Data Hiding](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Data%20Hiding)
+6. [Access modifiers](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Access%20Modifiers)
+7. [Enumerated Types or Enums](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Enumerated%20Types%20or%20Enums)
+8. [friend class and Friend Function](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/friend%20function%20and%20friend%20class)
+9. [Operator Overloading](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Operator%20Overloading%20in%20C%2B%2B)
+10. **Inheritance**  
+11. **Polymorphism**
 <br> 
 
 ## Object-oriented programming:
