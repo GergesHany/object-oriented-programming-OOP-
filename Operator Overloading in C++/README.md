@@ -7,6 +7,11 @@
 - [implementation all Binary Arithmetic Operators overloading](#implementation-all-Binary-Arithmetic-Operators-overloading)
 - [implementation all Unary Arithmetic Operators overloading](#implementation-all-Unary-Arithmetic-Operators-overloading)
 - [implementation all Bit-wise Operators overloading](#implementation-all-Bit-wise-Operators-overloading)
+- [implementation all Subscript Operators overloading](#implementation-all-Subscript-Operators-overloading)
+- [implementation all Function call Operators overloading](#implementation-all-Function-call-Operators-overloading)
+- [implementation all Logical Operators overloading](#implementation-all-Logical-Operators-overloading)
+- [implementation all Relational Operators overloading](#implementation-all-Relational-Operators-overloading)
+
 
 
 
@@ -677,6 +682,255 @@ output:
 - The Bit- wise NOT of c1 is: -11 + i-6
 - The Bit- wise Left Shift of c1 is: 40 + i20
 - The Bit- wise Right Shift of c1 is: 2 + i1
+
+
+## implementation all Subscript Operators overloading
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+     real = r;
+     imag = i;
+  }
+
+  // operator overloading Subscript
+  int operator[](int index) {
+     if (index == 0) return real;
+     else if (index == 1) return imag;
+     else return -1;
+  }
+
+  // function to print the complex number
+  void print() {
+     cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+   
+  complex c1(10, 5); // constructor called
+  c1.print(); // 10 + i5
+  cout << c1.operator[](0); // print real part
+
+  return 0;
+}
+```
+
+output:
+- 10 + i5
+- 10
+
+
+## implementation all Function call Operators overloading
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+    real = r;
+    imag = i;
+  }
+
+  // operator overloading Function call
+  int operator () () {
+    return (real * real + imag * imag);
+  }
+
+  // function to print the complex number
+  void print() {
+    cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+   
+  complex c1(10, 5); // constructor called
+  c1.print(); // 10 + i5
+  cout << c1() << endl; // 125
+
+  return 0;
+}
+
+```
+
+output:
+- 10 + i5
+- 125
+
+
+
+## implementation all Logical Operators overloading
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+	real = r;
+	imag = i;
+  }
+
+  // logic or operator overloading 
+  complex operator || (complex const &obj) {
+	complex res;
+	res.real = real || obj.real;
+	res.imag = imag || obj.imag;
+	return res;
+  }
+  
+  // logic and operator overloading
+  complex operator && (complex const &obj) {
+	complex res;
+	res.real = real && obj.real;
+	res.imag = imag && obj.imag;
+	return res;
+  }
+
+  // logic not operator overloading
+  complex operator ! () {
+	complex res;
+	res.real = !real;
+	res.imag = !imag;
+	return res;
+  }
+
+  // function to print the complex number
+  void print() {
+	cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+   
+  complex c1(10, 5), c2(2, 4);
+  complex c3 = c1 || c2; // = c1.operator||(c2) -> to get the result of c1 || c2
+  complex c4 = c1 && c2; // = c1.operator&&(c2) -> to get the result of c1 && c2
+  complex c5 = !c1; // = c1.operator!() -> to get the result of !c1
+  cout << "The result of c1 || c2 is: "; c3.print(); // c3.print() -> to print the result of c1 || c2
+  cout << "The result of c1 && c2 is: "; c4.print(); // c4.print() -> to print the result of c1 && c2
+  cout << "The result of !c1 is: "; c5.print(); // c5.print() -> to print the result of !c1
+  
+  return 0;
+}
+
+```
+
+output:
+- The result of c1 || c2 is: 1 + i1
+- The result of c1 && c2 is: 1 + i1
+- The result of !c1 is: 0 + i0
+
+
+## implementation all Relational Operators overloading
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+	real = r;
+	imag = i;
+  }
+
+  // Relational operators overloading
+
+  // greater than operator overloading
+  bool operator > (complex &c) {
+	return (real > c.real && imag > c.imag);
+  }
+
+  // less than operator overloading
+  bool operator < (complex &c) {
+	return (real < c.real && imag < c.imag);
+  }
+
+  // equal to operator overloading
+  bool operator == (complex &c) {
+	return (real == c.real && imag == c.imag);
+  }
+
+  // not equal to operator overloading
+  bool operator != (complex &c) {
+	return (real != c.real && imag != c.imag);
+  }
+
+  // greater than or equal to operator overloading
+  bool operator >= (complex &c) {
+	return (real >= c.real && imag >= c.imag);
+  }
+
+  // less than or equal to operator overloading
+  bool operator <= (complex &c) {
+	return (real <= c.real && imag <= c.imag);
+  }
+
+  // function to print the complex number
+  void print() {
+	cout << real << " + i" << imag << endl;
+  }
+
+};
+
+
+int main() {
+
+  complex c1(10, 5), c2(2, 4); 
+
+  // compare two complex numbers using relational operators
+
+  if (c1 > c2) cout << "c1 is greater than c2" << endl;
+  else cout << "c2 is greater than c1" << endl;
+
+  if (c1 < c2) cout << "c1 is less than c2" << endl;
+  else cout << "c2 is less than c1" << endl;
+
+  if (c1 == c2) cout << "c1 is equal to c2" << endl;
+  else cout << "c1 is not equal to c2" << endl;
+
+  if (c1 != c2) cout << "c1 is not equal to c2" << endl;
+  else cout << "c1 is equal to c2" << endl;
+
+  if (c1 >= c2) cout << "c1 is greater than or equal to c2" << endl;
+  else cout << "c1 is less than c2" << endl;
+
+  if (c1 <= c2) cout << "c1 is less than or equal to c2" << endl;
+  else cout << "c1 is greater than c2" << endl;
+
+  return 0;
+}
+
+```
+
 
 
 
