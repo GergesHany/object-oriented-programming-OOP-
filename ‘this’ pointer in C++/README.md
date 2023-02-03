@@ -1,5 +1,5 @@
 - [this pointer](#this-pointer)
-- [When local variables name is same as members name](#When-local-variable’s-name-is-same-as-member’s-name)
+- [When local variables name is same as members name](#When-local-variables-name-is-same-as-members-name)
 - [To return reference to the calling object](#To-return-reference-to-the-calling-object)
 
 
@@ -26,7 +26,7 @@ delete this;
 As Stroustrup said ‘this’ could be the reference than the pointer, but the reference was not present in the early version of C++. If ‘this’ is implemented as a reference then, the above problem could be avoided and it could be safer than the pointer.
 
 Following are the situations where ‘this’ pointer is used:
-## When local variable’s name is same as member’s name
+## When local variables name is same as members name
 ```cpp
 #include<iostream>
 using namespace std;
