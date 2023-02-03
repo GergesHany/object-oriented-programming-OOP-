@@ -11,7 +11,8 @@
 - [implementation all Function call Operators overloading](#implementation-all-Function-call-Operators-overloading)
 - [implementation all Logical Operators overloading](#implementation-all-Logical-Operators-overloading)
 - [implementation all Relational Operators overloading](#implementation-all-Relational-Operators-overloading)
-
+- [implementation all friend Operators overloading](#implementation-all-friend-Operators-overloading)
+- [implementation all Input and Output Operators overloading](#implementation-all-Input-and-Output-Operators overloading)
 
 
 
@@ -937,5 +938,168 @@ int main() {
 - c1 is not equal to c2
 - c1 is greater than or equal to c2
 - c1 is greater than c2
+
+
+
+## implementation all friend Operators overloading
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+	  real = r;
+	  imag = i;
+  }
+
+  // operator overloading
+  friend complex operator + (complex const &, complex const &); 
+  friend complex operator - (complex const &, complex const &);
+  friend complex operator * (complex const &, complex const &);
+  friend complex operator / (complex const &, complex const &);
+  friend complex operator + (complex const &, int const &);
+  friend complex operator + (int const &, complex const &);
+
+
+  // function to print the complex number
+  void print() {
+  	cout << real << " + i" << imag << endl;
+  }
+
+};
+
+// operator overloading
+complex operator + (complex const &obj1, complex const &obj2) {
+  complex res;
+  res.real = obj1.real + obj2.real;
+  res.imag = obj1.imag + obj2.imag;
+  return res;
+}
+
+complex operator - (complex const &obj1, complex const &obj2) {
+  complex res;
+  res.real = obj1.real - obj2.real;
+  res.imag = obj1.imag - obj2.imag;
+  return res;
+}
+
+complex operator * (complex const &obj1, complex const &obj2) {
+  complex res;
+  res.real = obj1.real * obj2.real;
+  res.imag = obj1.imag * obj2.imag;
+  return res;
+}
+
+complex operator / (complex const &obj1, complex const &obj2) {
+  complex res;
+  res.real = obj1.real / obj2.real;
+  res.imag = obj1.imag / obj2.imag;
+  return res;
+}
+
+complex operator + (complex const &obj1, int const &obj2) {
+  complex res;
+  res.real = obj1.real + obj2;
+  res.imag = obj1.imag + obj2;
+  return res;
+}
+
+complex operator + (int const &obj1, complex const &obj2) {
+  complex res;
+  res.real = obj1 + obj2.real;
+  res.imag = obj1 + obj2.imag;
+  return res;
+}
+
+int main() {
+
+  complex c1(10, 5), c2(2, 4); 
+  complex c3 = c1 + c2; // operator overloading plus
+  complex c4 = c1 - c2; // operator overloading minus
+  complex c5 = c1 * c2; // operator overloading multiply
+  complex c6 = c1 / c2; // operator overloading divide
+  complex c7 = c1 + 5; // operator overloading post plus
+  complex c8 = 5 + c2; // operator overloading pre plus
+  
+  cout << "c1 + c2 = "; c3.print();
+  cout << "c1 - c2 = "; c4.print();
+  cout << "c1 * c2 = "; c5.print();
+  cout << "c1 / c2 = "; c6.print();
+  cout << "c1 + 5 = "; c7.print();
+  cout << "5 + c2 = "; c8.print();
+
+  return 0;
+}
+```
+
+output:
+- c1 + c2 = 12 + i9
+- c1 - c2 = 8 + i1
+- c1 * c2 = 20 + i20
+- c1 / c2 = 5 + i1
+- c1 + 5 = 15 + i10
+- 5 + c2 = 7 + i9
+- 15 + i16
+
+## implementation all Input and Output Operators overloading
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class complex{
+private:
+  int real, imag;
+public:   
+  
+  // constructor to initialize real and imaginary part
+  complex(int r = 0, int i = 0) {
+	  real = r;
+	  imag = i;
+  }
+
+  // operator overloading input and output
+  friend ostream &operator << (ostream &out, const complex &c);
+  friend istream &operator >> (istream &in, complex &c);
+
+};
+
+// operator overloading output
+ostream &operator << (ostream &out, const complex &c) {
+  out << c.real << " + i" << c.imag << endl;
+  return out;
+}
+
+// operator overloading input
+istream &operator >> (istream &in, complex &c) {
+  in >> c.real >> c.imag;
+  return in;
+}
+
+int main() {
+
+
+  complex c1; // object of class complex
+  cin >> c1; // input from user
+  cout << "The complex number is: " << c1; // output to user
+
+  return 0;
+}
+```
+
+`input: 10 15`
+`out put: The complex number is: 10 + i15`
+
+
+
+
+
+
 
 
