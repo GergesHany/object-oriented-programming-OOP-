@@ -1,5 +1,5 @@
 - [this pointer](#this-pointer)
-- [When local variable’s name is same as member’s name](#When-local-variable’s-name-is-same-as-member’s-name)
+- [When local variables name is same as members name](#When-local-variable’s-name-is-same-as-member’s-name)
 - [To return reference to the calling object](#To-return-reference-to-the-calling-object)
 
 
