@@ -1,4 +1,9 @@
-## `this` pointer in C++
+- [this pointer](#`this`-pointer)
+- [When local variable’s name is same as member’s name](#When-local-variable’s-name-is-same-as-member’s-name)
+- [To return reference to the calling object](#To-return-reference-to-the-calling-object)
+
+
+## `this` pointer
 
 To understand ‘this’ pointer, it is important to know how objects look at functions and data members of a class.
 
