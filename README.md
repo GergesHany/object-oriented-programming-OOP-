@@ -10,7 +10,7 @@
 8. [friend class and Friend Function](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/friend%20function%20and%20friend%20class)
 9. [Operator Overloading](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Operator%20Overloading%20in%20C%2B%2B)
 10. [this pointer in C++](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/%E2%80%98this%E2%80%99%20pointer%20in%20C%2B%2B) 
-11. [Inheritance(https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B)  
+11. [Inheritance](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B)  
 12. **Polymorphism**
 <br> 
 
@@ -27,7 +27,7 @@ OOP was developed to increase the reusability and maintainability of source code
 ## Characteristics of an Object Oriented Programming language:
 - [Encapsulation](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Encapsulation)
 - [Abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/abstraction)
-- [Inheritance(https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B)
+- [Inheritance](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B) 
 - Polymorphism
 - [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)   
 
