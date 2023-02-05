@@ -1,10 +1,13 @@
 - [Inheritance](#Inheritance) 
 - [Why and when to use inheritance](#Why-and-when-to-use-inheritance)
 - [Implementing inheritance](#Implementing-inheritance)
-- [Example define member function without argument within the class](#Example:-define-member-function-without-argument-within-the-class)
-- [Modes of Inheritance: There are 3 modes of inheritance](#Modes-of-Inheritance:-There-are-3-modes-of-inheritance)
-- [Example: public Inheritance](#Example:-public-Inheritance)
+- [Example define member function without argument within the class](#Example-define-member-function-without-argument-within-the-class)
+- [Modes of Inheritance There are 3 modes of inheritance](#Modes-of-Inheritance-There-are-3-modes-of-inheritance)
+- [Example public Inheritance](#Example-public-Inheritance)
 - [Accessibility in public Inheritance](#Accessibility-in-public-Inheritance)
+- [Accessibility in protected Inheritance](#Accessibility-in-protected-Inheritance)
+- [Example private Inheritance](#Example-private-Inheritance)
+- [Accessibility in private Inheritance](#Accessibility-in-private-Inheritance)
 
 
 
@@ -74,7 +77,7 @@ class ABC: XYZ { //private derivation by default
 When a base class is privately inherited by the derived class, public members of the base class becomes the private members of the derived class and therefore, the public members of the base class can only be accessed by the member functions of the derived class. They are inaccessible to the objects of the derived class.
 On the other hand, when the base class is publicly inherited by the derived class, public members of the base class also become the public members of the derived class. Therefore, the public members of the base class are accessible by the objects of the derived class as well as by the member functions of the derived class.
 
-## Example: define member function without argument within the class
+## Example define member function without argument within the class
  
 ```cpp
 #include<iostream>
@@ -139,17 +142,17 @@ main()
 }
 ```
 
-#### Output:
-
-- Enter the Id: 101
-- Enter the Name: Dev
-- Enter the Course Name: GCS
-- Enter the Course Fee: 70000
-
-- 101      Dev     GCS    70000
+`Output:`
+```cpp
+  Enter the Id: 101
+  Enter the Name: Dev
+  Enter the Course Name: GCS
+  Enter the Course Fee: 70000
+  101      Dev     GCS    70000
+```
  
 
-## Modes of Inheritance: There are 3 modes of inheritance
+## Modes of Inheritance There are 3 modes of inheritance
 
 - `Public Mode:` If we derive a subclass from a `public` base class. Then the `public` member of the base class will become `public` in the derived class and `protected` members of the base class will become `protected` in the derived class.
 
@@ -203,7 +206,7 @@ class D : private A{  // 'private' is default for classes
 
 
 
-## Example: public Inheritance
+## Example public Inheritance
 
 ```cpp
 // C++ program to demonstrate the working of public inheritance
@@ -338,6 +341,111 @@ As a result, in `ProtectedDerived`:
 
 - `prot`, `pub` and `getPVT()` are inherited as `protected`
 - `pvt` is inaccessible since it is `private` in `Base`.
+
+As we know, `protected` members cannot be directly accessed from outside the class. As a result, we cannot use `getPVT()` from `ProtectedDerived`
+
+That is also why we need to create the `getPub()` function in `ProtectedDerived` in order to access the `pub` variable.
+
+```cpp
+// Error: member "Base::getPVT()" is inaccessible
+cout << "Private = " << object1.getPVT();
+
+// Error: member "Base::pub" is inaccessible
+cout << "Public = " << object1.pub;
+```
+
+## Accessibility in protected Inheritance
+
+| Accessibility | private members | protected members | public members |
+| :---: | :---: |  :---:   | :---: |
+| Base Class | Yes | Yes | Yes |
+|Derived Class| No | Yes | Yes (inherited as protected variables) |
+
+
+## Example private Inheritance
+```cpp
+// C++ program to demonstrate the working of private inheritance
+
+#include <iostream>
+using namespace std;
+
+class Base {
+  private:
+    int pvt = 1;
+
+  protected:
+    int prot = 2;
+
+  public:
+    int pub = 3;
+
+    // function to access private member
+    int getPVT() {
+      return pvt;
+    }
+};
+
+class PrivateDerived : private Base {
+  public:
+    // function to access protected member from Base
+    int getProt() {
+      return prot;
+    }
+
+    // function to access private member
+    int getPub() {
+      return pub;
+    }
+};
+
+int main() {
+  PrivateDerived object1;
+  cout << "Private cannot be accessed." << endl;
+  cout << "Protected = " << object1.getProt() << endl;
+  cout << "Public = " << object1.getPub() << endl;
+  return 0;
+}
+```
+
+`Output`
+```cpp
+  Private cannot be accessed.
+  Protected = 2
+  Public = 3
+```
+
+Here, we have derived `PrivateDerived` from `Base` in `private mode`.
+As a result, in `PrivateDerived:`
+
+- `prot`, `pub` and `getPVT()` are inherited as `private`.
+- `pvt` is inaccessible since it is `private` in `Base`
+
+As we know, private members cannot be directly accessed from outside the class. As a result, we cannot use `getPVT()` from `PrivateDerived`.
+
+That is also why we need to create the `getPub()` function in PrivateDerived in order to access the `pub` `variable`.
+
+```cpp
+// Error: member "Base::getPVT()" is inaccessible
+cout << "Private = " << object1.getPVT();
+
+// Error: member "Base::pub" is inaccessible
+cout << "Public = " << object1.pub;
+```
+## Accessibility in private Inheritance
+
+| Accessibility | private members | protected members | public members |
+| :---: | :---: |  :---:   | :---: |
+| Base Class | Yes | Yes | Yes |
+|Derived Class| No | Yes (inherited as private variables) | Yes (inherited as protected variables) |
+
+
+
+
+
+
+
+
+
 
 
 
