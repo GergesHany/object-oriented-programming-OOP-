@@ -8,7 +8,7 @@
 - [Accessibility in protected Inheritance](#Accessibility-in-protected-Inheritance)
 - [Example private Inheritance](#Example-private-Inheritance)
 - [Accessibility in private Inheritance](#Accessibility-in-private-Inheritance)
-
+- [Types Of Inheritance](#Types-Of-Inheritance)
 
 
 ## Inheritance 
@@ -276,7 +276,7 @@ However, `prot` is accessible to `PublicDerived` due to public inheritance. So, 
 ## Accessibility in public Inheritance
 
 
-| Accessibility | private members	 | protected members | public members |
+| Accessibility | private members | protected members | public members |
 | :---: | :---: |  :---:   | :---: |
 | Base Class | Yes | Yes | Yes |
 |Derived Class| No | Yes | Yes |
@@ -439,20 +439,128 @@ cout << "Public = " << object1.pub;
 |Derived Class| No | Yes (inherited as private variables) | Yes (inherited as protected variables) |
 
 
+## Types Of Inheritance
+
+- Single inheritance
+- Multilevel inheritance
+- Multiple inheritance
+- Hierarchical inheritance
+- Hybrid inheritance
 
 
+## `Single Inheritance:` In single inheritance, a class is allowed to inherit from only one class. i.e. one subclass is inherited by one base class only.
+
+![single-inheritance](https://user-images.githubusercontent.com/105644935/216795879-4ccad917-0e25-4cc5-b602-a11cd1858119.png)
 
 
+### Syntax: 
+
+```cpp
+class subclass_name : access_mode base_class{
+  // body of subclass
+};
+
+OR
+
+class A{ 
+// bode 
+};
+
+class B: public A{
+ // bpde
+};
+
+```
+
+```cpp
+// C++ program to explain Single inheritance
+#include<iostream>
+using namespace std;
+
+// base class
+class Vehicle {
+public:
+  Vehicle(){
+   cout << "This is a Vehicle\n";
+  }
+};
+
+// sub class derived from a single base classes
+class Car : public Vehicle {
+
+};
+
+// main function
+int main()
+{
+  // Creating object of sub class will invoke the constructor of base classes
+  Car obj;
+
+  return 0;
+}
+
+```
+`Output: This is a Vehicle`
 
 
+## `Multiple Inheritance:` Multiple Inheritance is a feature of C++ where a class can inherit from more than one class. i.e one subclass is inherited from more than one base class.
+
+![multiple-inheritance](https://user-images.githubusercontent.com/105644935/216795923-445a45fc-e92a-4283-baec-b2451f0fb7b5.png)
+
+```cpp
+class subclass_name : access_mode base_class1, access_mode base_class2, {
+  // body of subclass
+};
 
 
+class B{ 
+ // body
+};
+
+class C{
+ // body
+};
+
+class A: public B, public C {
+   // body
+};
+```
+
+Here, the number of base classes will be separated by a comma (‘, ‘) and the access mode for every base class must be specified. 
 
 
+```cpp
+// C++ program to explain multiple inheritance
+#include <iostream>
+using namespace std;
 
+// first base class
+class Vehicle {
+public:
+   Vehicle() { 
+     cout << "This is a Vehicle\n";  
+   }
+};
 
+// second base class
+class FourWheeler {
+public:
+  FourWheeler(){
+     cout << "This is a 4 wheeler Vehicle\n";
+  }
+};
 
+// sub class derived from two base classes
+class Car : public Vehicle, public FourWheeler {
 
+};
 
-
+// main function
+int main()
+{
+// Creating object of sub class will invoke the constructor of base classes.
+  Car obj;
+  return 0;
+}
+```
 
