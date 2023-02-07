@@ -11,7 +11,7 @@
 9. [Operator Overloading](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Operator%20Overloading%20in%20C%2B%2B)
 10. [this pointer in C++](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/%E2%80%98this%E2%80%99%20pointer%20in%20C%2B%2B) 
 11. [Inheritance](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B)  
-12. **Polymorphism**
+12. [Polymorphism](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Polymorphism)
 <br> 
 
 ## Object-oriented programming:
@@ -28,7 +28,7 @@ OOP was developed to increase the reusability and maintainability of source code
 - [Encapsulation](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Encapsulation)
 - [Abstraction](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/abstraction)
 - [Inheritance](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B) 
-- Polymorphism
+- [Polymorphism](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Polymorphism)
 - [Class and Objects](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Objects%20and%20classes)   
 
 ![blog-img-21-5d7f491af2f797edc35c669d38cdacaa](https://user-images.githubusercontent.com/105644935/213039464-b24b0005-c74c-4985-9920-1422b78891a2.svg)
