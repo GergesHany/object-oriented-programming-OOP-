@@ -4,6 +4,7 @@
 - [Runtime Polymorphism](#Runtime-Polymorphism)
 - [Virtual Function](#Virtual-Function)
 - [Some Key Points About Virtual Functions](#Some-Key-Points-About-Virtual-Functions)
+- [Function Overloading vs Function Overriding](#Function-Overloading-vs-Function-Overriding)
 
 
 ## polymorphism
@@ -39,42 +40,41 @@ using namespace std;
 class Geeks {
 public:
 
-	// Function with 1 int parameter
-	void func(int x){
-		cout << "value of x is " <<	x << endl;
-	}
+  // Function with 1 int parameter
+  void func(int x){
+	cout << "value of x is " <<	x << endl;
+  }
 
-	// Function with same name but
-	// 1 double parameter
-	void func(double x){
-		cout << "value of x is " << x << endl;
-	}
+  // Function with same name but
+  // 1 double parameter
+  void func(double x){
+	cout << "value of x is " << x << endl;
+  }
 
-	// Function with same name and
-	// 2 int parameters
-	void func(int x, int y)
-	{
-		cout << "value of x and y is " <<	x << ", " << y << endl;
-	}
+  // Function with same name and
+  // 2 int parameters
+  void func(int x, int y){
+	cout << "value of x and y is " <<	x << ", " << y << endl;
+  }
 };
 
 
 int main()
 {
-	Geeks obj1;
+  Geeks obj1;
 
-	// Function being called depends
-	// on the parameters passed
-	// func() is called with int value
-	obj1.func(7);
+  // Function being called depends
+  // on the parameters passed
+  // func() is called with int value
+  obj1.func(7);
 
-	// func() is called with double value
-	obj1.func(9.132);
+  // func() is called with double value
+  obj1.func(9.132);
 
-	// func() is called with 2 int values
-	obj1.func(85, 64);
+  // func() is called with 2 int values
+  obj1.func(85, 64);
 
-	return 0;
+  return 0;
 }
 ```
 `Output`
@@ -105,37 +105,38 @@ using namespace std;
 
 class Complex {
 private:
-	int real, imag;
+  int real, imag;
 
 public:
-	Complex(int r = 0,	int i = 0){
-		real = r;
-		imag = i;
-	}
+  Complex(int r = 0, int i = 0){
+	real = r;
+	imag = i;
+  }
 
-	// This is automatically called
-	// when '+' is used with between
-	// two Complex objects
-	Complex operator+(Complex const& obj){
-		Complex res;
-		res.real = real + obj.real;
-		res.imag = imag + obj.imag;
-		return res;
-	}
+  // This is automatically called
+  // when '+' is used with between
+  // two Complex objects
+  Complex operator+(Complex const& obj){
+	Complex res;
+	res.real = real + obj.real;
+	res.imag = imag + obj.imag;
+	return res;
+  }
 
-	void print(){
-	  cout << real << " + i" <<	imag << endl;
-	}
+  void print(){
+    cout << real << " + i" <<	imag << endl;
+  }
 };
 
 int main()
 {
-	Complex c1(10, 5), c2(2, 4);
+  Complex c1(10, 5), c2(2, 4);
 
-	// An example call to "operator+"
-	Complex c3 = c1 + c2;
-	c3.print();
-
+  // An example call to "operator+"
+  Complex c3 = c1 + c2;
+  c3.print();
+  
+  return 0;
 }
 ```
 
@@ -164,45 +165,45 @@ using namespace std;
 
 class base {
 public:
-	virtual void print(){
-		cout << "print base class" <<	endl;
-	}
+  virtual void print(){
+	cout << "print base class" << endl;
+  }
 
-	void show(){
-	  cout << "show base class" << endl;
-	}
+  void show(){
+    cout << "show base class" << endl;
+  }
 };
 
 class derived : public base {
 public:
 
-	// print () is already virtual function in
-	// derived class, we could also declared as
-	// virtual void print () explicitly
-	void print(){
-		cout << "print derived class" <<	endl;
-	}
+  // print () is already virtual function in
+  // derived class, we could also declared as
+  // virtual void print () explicitly
+  void print(){
+	cout << "print derived class" << endl;
+  }
 
-	void show(){
-  	cout << "show derived class" <<		endl;
-	}
+  void show(){
+    cout << "show derived class" << endl;
+  }
 };
 
 int main()
 {
-	base* bptr;
-	derived d;
-	bptr = &d;
+  base* bptr;
+  derived d;
+  bptr = &d;
 
-	// Virtual function, binded at
-	// runtime (Runtime polymorphism)
-	bptr->print();
+  // Virtual function, binded at
+  // runtime (Runtime polymorphism)
+  bptr->print();
 
-	// Non-virtual function, binded
-	// at compile time
-	bptr->show();
+  // Non-virtual function, binded
+  // at compile time
+  bptr->show();
 
-	return 0;
+  return 0;
 }
 ```
 `Output`
@@ -232,45 +233,46 @@ using namespace std;
 class GFG_Base {
 
 public:
-	// virtual function
-	virtual void display(){
-		cout << "Called virtual Base Class function" << "\n\n";
-	}
+  // virtual function
+  virtual void display(){
+	cout << "Called virtual Base Class function" << "\n\n";
+  }
 
-	void print()
-	{
-		cout << "Called GFG_Base print function" << "\n\n";
-	}
+  void print(){
+	cout << "Called GFG_Base print function" << "\n\n";
+  }
 };
 
 // Declaring a Child Class
 class GFG_Child : public GFG_Base {
 
 public:
-	void display(){
-		cout << "Called GFG_Child Display Function" << "\n\n";
-	}
+  void display(){
+	cout << "Called GFG_Child Display Function" << "\n\n";
+  }
 
-	void print(){
-		cout << "Called GFG_Child print Function" <<	"\n\n";
-	}
+  void print(){
+	cout << "Called GFG_Child print Function" <<	"\n\n";
+  }
 };
 
 
 int main()
 {
-	// Create a reference of class GFG_Base
-	GFG_Base* base;
+  // Create a reference of class GFG_Base
+  GFG_Base* base;
 
-	GFG_Child child;
+  GFG_Child child;
 
-	base = &child;
+  base = &child;
 
-	// This will call the virtual function
-	base->GFG_Base::display();
+  // This will call the virtual function
+  base->GFG_Base::display();
 
-	// this will call the non-virtual function
-	base->print();
+  // this will call the non-virtual function
+  base->print();
+  
+  return 0;
 }
 ```
 
@@ -280,6 +282,19 @@ Called virtual Base Class function
 Called GFG_Base print function
 ```
 
+<br>
+
+## Function Overloading vs Function Overriding 
+
+| Function Overloading  | Function Overriding |
+| :---: | :---: |
+| Function Overloading provides multiple definitions of the function by changing signature. | Function Overriding is the redefinition of base class function in its derived class with same signature.  |
+| An example of compile time polymorphism. | An example of run time polymorphism.  |
+| Function signatures should be different. | Function signatures should be the same. |
+| Overloaded functions are in same scope. | Overridden functions are in different scopes. |
+| Overloading is used when the same function has to behave differently depending upon parameters passed to them. | Overriding is needed when derived class function has to do some different job than the base class function.  |
+| A function has the ability to load multiple times.  | A function can be overridden only a single time. |
+| In function overloading, we don’t need inheritance. | In function overriding, we need an inheritance concept. |
 
 
 
