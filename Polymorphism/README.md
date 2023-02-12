@@ -166,7 +166,7 @@ using namespace std;
 class base {
 public:
   virtual void print(){
-	cout << "print base class" << endl;
+     cout << "print base class" << endl;
   }
 
   void show(){
@@ -217,7 +217,7 @@ A virtual function is a member function that is declared in the base class using
 
 
 ## Some Key Points About Virtual Functions
-- irtual functions are Dynamic in nature
+- Virtual functions are Dynamic in nature
 - They are defined by inserting the keyword “virtual” inside a base class and are always declared with a base class and overridden in a child class
 - A virtual function is called during Runtime
 
