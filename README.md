@@ -12,6 +12,7 @@
 10. [this pointer in C++](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/%E2%80%98this%E2%80%99%20pointer%20in%20C%2B%2B) 
 11. [Inheritance](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Inheritance%20in%20C%2B%2B)  
 12. [Polymorphism](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Polymorphism)
+13. [Templates](https://github.com/GergesHany/object-oriented-programming-OOP-/tree/main/Templates%20in%20C%2B%2B)
 <br> 
 
 ## Object-oriented programming:
