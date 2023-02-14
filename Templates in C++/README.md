@@ -121,13 +121,59 @@ int main()
 `Output: 1 2 3 4 5`
 
 
+## Can there be more than one argument to templates? 
 
+Yes, like normal parameters, we can pass more than one data type as arguments to templates. The following example demonstrates the same.
 
+```cpp
+#include <iostream>
+using namespace std;
 
+template <class T, class U> class A {
+  T x;
+  U y;
+public:
+  A() { 
+   cout << "Constructor Called" << "\n"; 
+  }
+};
 
+int main()
+{
+  A < char, char > a;
+  A < int, double > b;
+ return 0;
+}
+```
+### Output
+```cpp
+Constructor Called
+Constructor Called
+```
 
+Can we specify a default value for template arguments?
 
+Yes, like normal parameters, we can specify default arguments to templates. The following example demonstrates the same. 
 
+```cpp
+#include <iostream>
+using namespace std;
 
+template <class T, class U = char> class A {
+public:
+  T x;
+  U y;
+  A() { 
+    cout << "Constructor Called" << "\n"; 
+  }
+};
 
+int main()
+{
+  A < char > a; // This will call A<char, char>
+  return 0;
+}
+```
+
+`Output: Constructor Called`
 
