@@ -1,6 +1,7 @@
 - [File Handling](#File-Handling)
 - [Streams](#Streams)
 - [Classes for File stream operations](#Classes-for-File-stream-operations)
+- [ios](#ios:)
 
 
 
@@ -24,7 +25,7 @@ The input and output operation between the executing program and the devices lik
 
 The I/O system of C++ contains a set of classes which define the file handling methods. These include ifstream, ofstream and fstream classes. These classes are derived from fstream and from the corresponding iostream class. These classes, designed to manage the disk files, are declared in fstream and therefore we must include this file in any program that uses files.
 
-1. ## ios:-
+1. ## ios:
 - ios stands for input output stream.
 - This class is the base class for other classes in this class hierarchy.
 - This class contains the necessary facilities that are used by all the other derived classes for input and output operations.
