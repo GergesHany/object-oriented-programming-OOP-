@@ -1,7 +1,15 @@
 - [File Handling](#File-Handling)
 - [Streams](#Streams)
 - [Classes for File stream operations](#Classes-for-File-stream-operations)
-- [ios](#ios:)
+- [ios](#ios)
+- [istream](#istream)
+- [ostream](#ostream)
+- [streambuf](#streambuf)
+- [fstreambase](#fstreambase)
+- [ifstream](#ifstream)
+- [ofstream](#ofstream)
+- [fstream](#fstream)
+- [filebuf](#filebuf)
 
 
 
@@ -25,13 +33,13 @@ The input and output operation between the executing program and the devices lik
 
 The I/O system of C++ contains a set of classes which define the file handling methods. These include ifstream, ofstream and fstream classes. These classes are derived from fstream and from the corresponding iostream class. These classes, designed to manage the disk files, are declared in fstream and therefore we must include this file in any program that uses files.
 
-1. ## ios:
+1. ## ios
 - ios stands for input output stream.
 - This class is the base class for other classes in this class hierarchy.
 - This class contains the necessary facilities that are used by all the other derived classes for input and output operations.
 
 
-2. ## istream:-
+2. ## istream
 
 - istream stands for input stream.
 - This class is derived from the class `ios`.
@@ -41,7 +49,7 @@ The I/O system of C++ contains a set of classes which define the file handling m
 
 
 
-3. ## ostream:-
+3. ## ostream
 
 - ostream stands for output stream.
 - This class is derived from the class `ios`.
@@ -50,37 +58,37 @@ The I/O system of C++ contains a set of classes which define the file handling m
 - This class declares output functions such as `put()` and `write()`
 
 
-4. ## streambuf:-
+4. ## streambuf
 
 - This class contains a pointer which points to the buffer which is used to manage the input and output streams.
 
 
-5. ## fstreambase:-
+5. ## fstreambase
 
 - This class provides operations common to the file streams. Serves as a base for fstream, ifstream and ofstream class. 
 - This class contains `open()` and `close()` function.
 
 
-6. ## ifstream:-
+6. ## ifstream
 
 - This class provides input operations.
 - It contains `open()` function with default input mode. 
 - Inherits the functions `get()`, `getline()`, `read()`, `seekg()` and `tellg()` functions from the istream.
 
-7. ## ofstream:-
+7. ## ofstream
 
 - This class provides output operations.
 - It contains `open()` function with default output mode. 
 - Inherits the functions `put()`,  `write()`, `seekp()` and `tellp()` functions from the ostream.
 
 
-8. ## fstream:-
+8. ## fstream
 
 - This class provides support for simultaneous input and output operations.
 - Inherits all the functions from istream and ostream classes through iostream.
 
 
-9. ## . filebuf:-
+9. ## filebuf
 
 - Its purpose is to set the file buffers to read and write.
 - We can also use file buffer member function to determine the length of the file.
