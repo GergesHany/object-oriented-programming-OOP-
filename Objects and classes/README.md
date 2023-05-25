@@ -884,7 +884,7 @@ int main()
 ```
 
 
-## Static data members
+##  Static data members
 
 Static data members are class members that are declared using static keywords. A static member has certain special characteristics. These are:
 
@@ -1069,7 +1069,7 @@ int main()
 
 <br>
 
-## Const member functions
+##  Const member functions
 
 Constant member functions are those functions that are denied permission to change the values of the data members of their class. To make a member function constant, the keyword “const” is appended to the function prototype and also to the function definition header.
 
