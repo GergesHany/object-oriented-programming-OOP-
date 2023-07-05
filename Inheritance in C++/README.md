@@ -2,6 +2,9 @@
 - [Inheritance part 1](https://www.youtube.com/watch?v=zIo__kgxgqo&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=19)
 - [Inheritance part 2](https://www.youtube.com/watch?v=zIo__kgxgqo&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=20)
 
+<hr><br>
+
+# content
 
 - [Inheritance](#Inheritance) 
 - [Why and when to use inheritance](#Why-and-when-to-use-inheritance)
@@ -14,6 +17,9 @@
 - [Example private Inheritance](#Example-private-Inheritance)
 - [Accessibility in private Inheritance](#Accessibility-in-private-Inheritance)
 - [Types Of Inheritance](#Types-Of-Inheritance)
+
+
+<hr><br>
 
 
 ## Inheritance 
