@@ -1,3 +1,14 @@
+# Explanation videos 
+- [Classes](https://www.youtube.com/watch?v=2ZIrInD95Us&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=3)
+- [Constructors](https://www.youtube.com/watch?v=ndgC7OAxf6M&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=4)
+- [Destructor](https://www.youtube.com/watch?v=NA880p9bqDY&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=5)
+- [Structures](https://www.youtube.com/watch?v=NA880p9bqDY&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=6)
+- [new and delete](https://www.youtube.com/watch?v=NA880p9bqDY&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=7)
+
+<hr><br>
+
+# content
+
 - [Objects and classes](#Objects-and-classes)
 - [Constructors](#Constructors)
 - [Destructor](#Destructor)
