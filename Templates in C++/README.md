@@ -1,8 +1,16 @@
+# Explanation videos
+- [Template Function/Templates Function-Templates with Multiple Parameters](https://www.youtube.com/watch?v=vdTTGrBNJUg&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=23)
+- [Class template/Template specialization](https://www.youtube.com/watch?v=vdTTGrBNJUg&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=24)
+
+<hr><br>
+
+# Content
+
 - [Templates](#Templates)
 - [How Do Templates Work](#How-Do-Templates-Work)
 - [Class Templates](#Class-Templates)
 
-
+<hr><br>
 
 ## Templates
 
