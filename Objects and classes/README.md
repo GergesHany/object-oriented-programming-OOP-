@@ -19,6 +19,8 @@
 - [Static data members](#Static-data-members)
 - [Const member functions](#Const-member-functions)
 
+<hr><br> 
+
 # Objects and classes
 **Exist two main concepts in OOP: Classes and objects.**
 
