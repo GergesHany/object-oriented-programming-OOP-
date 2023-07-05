@@ -1,3 +1,8 @@
+# Explanation videos
+- [Inheritance part 1](https://www.youtube.com/watch?v=zIo__kgxgqo&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=19)
+- [Inheritance part 2](https://www.youtube.com/watch?v=zIo__kgxgqo&list=PLCInYL3l2Aaiq1oLvi9TlWtArJyAuCVow&index=20)
+
+
 - [Inheritance](#Inheritance) 
 - [Why and when to use inheritance](#Why-and-when-to-use-inheritance)
 - [Implementing inheritance](#Implementing-inheritance)
