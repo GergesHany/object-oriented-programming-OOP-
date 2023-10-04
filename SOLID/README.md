@@ -293,7 +293,8 @@ private:
 
 ### Bad Example for Dependency Inversion Principle because the class is very tightly coupled
 
-<picture> <img align="center" src="Bad_DIP.png" width = 650px></picture>
+![Bad_DIP](https://github.com/GergesHany/object-oriented-programming-OOP-/assets/105644935/21abe1ec-b1e3-4229-a580-c5b01f4ffa81)
+
 
 ```cpp
 class MySQLDatabase {
@@ -335,7 +336,8 @@ private:
 
 ### Good Example of Dependency Inversion Principle because the class is cohesive and loosely coupled
 
-<picture> <img align="center" src="Good_DIP.png" width = 650px></picture>
+![Good_DIP](https://github.com/GergesHany/object-oriented-programming-OOP-/assets/105644935/d0c91405-3c0d-4162-abd9-1e490be71c8f)
+
 
 ```cpp
 class Database {
