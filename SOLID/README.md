@@ -1,4 +1,4 @@
-**SOLID Principles**
+## **SOLID Principles**
 
 - **Design pattern is a best practice to solve common problems in software design**.
 
@@ -53,7 +53,7 @@ class User:
         return f"Name: {self.name}, Email: {self.email}, Password: {self.password}"
 ```
 
-<hr>
+<hr> <br>
 
 ## **2 - Open-Closed Principle (OCP)**
 
@@ -116,7 +116,7 @@ class Developer(Employee):
         return self.salary * 1.2
 ```
 
-<hr>
+<hr> <br>
 
 ## **3 - Liskov Substitution Principle (LSP)**
 
@@ -190,7 +190,7 @@ class Square(Shape):
         return self.side * self.side
 ```
 
-<hr>
+<hr> <br>
 
 ## **4 - Interface Segregation Principle (ISP)**
 
@@ -285,7 +285,7 @@ private:
 };
 ```
 
-<hr>
+<hr> <br>
 
 ## **5- Dependency Inversion Principle (DIP)**
 
